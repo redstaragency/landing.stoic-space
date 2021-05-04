@@ -1,0 +1,187 @@
+// rows
+.row {
+    display: flex;
+}
+.row-desk {
+    display: flex;
+    @include adaptive(beforeDesk) {
+        display: block;
+    }
+}
+.row-mob {
+    display: block;
+    @include adaptive(mobile) {
+        display: flex;
+    }
+}
+.row-inline {
+    display: inline-flex;
+}
+.row-inline-desk {
+    display: inline-flex;
+    @include adaptive(mobile) {
+        display: block;
+    }
+}
+.row-inline-mob {
+    display: block;
+    @include adaptive(mobile) {
+        display: inline-flex;
+    }
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.wrap-desk {
+    flex-wrap: wrap;
+    @include adaptive(beforeDesk) {
+        flex-wrap: nowrap;
+    }
+}
+.wrap-mob {
+    flex-wrap: nowrap;
+    @include adaptive(beforeDesk) {
+        flex-wrap: wrap;
+    }
+}
+.v-row-start {
+    align-items: flex-start;
+}
+.v-row-center {
+    align-items: center;
+}
+.v-row-end {
+    align-items: flex-end;
+}
+.h-row-start {
+    justify-content: flex-start;
+}
+.h-row-between {
+    justify-content: space-between;
+}
+.h-row-center {
+    justify-content: center;
+}
+
+// columns
+@mixin createCol($qty, $mx, $my){
+    @if $qty == 1 {
+        max-width: 100%;
+    } @else if $qty != 1 and $mx == 0 {
+        max-width: calc(100% / #{$qty});
+    } @else {
+        max-width: calc((100% - #{$mx} * #{$qty - 1})/ #{$qty});
+    }
+
+    @if $mx != 0 {
+        margin-right: $mx;
+    }   
+
+    @if $qty != 1 and $mx != 0 {
+        &:nth-child(#{$qty}n) {
+            margin-right: 0;
+        }
+    }
+    @if $my != 0 {
+        &:nth-child(n + #{$qty + 1}) {
+            margin-top: $my;
+        }
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+}
+.column {
+    display: block;
+    width: 100%;
+}
+.column-2 {    
+    @include adaptive(mobile) {
+        @include createCol(1, 0, 20px);
+    }
+    @include adaptive(pad) {
+        @include createCol(2, 0, 0);
+    }
+    @include adaptive(desktop) {
+        @include createCol(2, 0, 0);
+    }
+}
+.column-3 {   
+    @include adaptive(mobile) {
+        @include createCol(1, 0, 20px);
+    }
+    @include adaptive(pad) {
+        @include createCol(2, 0, 20px);
+    }
+    @include adaptive(desktop) {
+        @include createCol(3, 0, 0);
+    }
+}
+.column-4 {    
+    @include adaptive(mobile) {
+        @include createCol(1, 0, 20px);
+    }
+    @include adaptive(pad) {
+        @include createCol(2, 0, 20px);
+    }
+    @include adaptive(desktop) {
+        @include createCol(4, 0, 0);
+    }
+}
+.column-2-m {    
+    @include adaptive(mobile) {
+        @include createCol(1, 0, 15px);
+    }
+    @include adaptive(pad) {
+        @include createCol(2, 10px, 20px);
+    }
+    @include adaptive(desktop) {
+        @include createCol(2, 20px, 28px);
+    }
+}
+.column-3-m {    
+    @include adaptive(mobile) {
+        @include createCol(1, 0, 20px);
+    }
+    @include adaptive(pad) {
+        @include createCol(2, 20px, 20px);
+    }
+    @include adaptive(desktop) {
+        @include createCol(3, 20px, 0);
+    }
+}
+.column-3-m-w {
+    @include adaptive(mobile) {
+        @include createCol(1, 0, 20px);
+    }
+    @include adaptive(pad) {
+        @include createCol(2, 20px, 30px);
+    }
+    @include adaptive(desktop) {
+        @include createCol(3, 20px, 40px);
+    }
+}
+.column-3-m-w-20 {
+    @include adaptive(mobile) {
+        @include createCol(1, 0, 20px);
+    }
+    @include adaptive(pad) {
+        @include createCol(2, 20px, 20px);
+    }
+    @include adaptive(desktop) {
+        @include createCol(3, 20px, 20px);
+    }
+}
+.column-5-m {    
+    @include adaptive(mobile) {
+        @include createCol(2, 10px, 14px);
+    }
+    @include adaptive(pad) {
+        @include createCol(3, 10px, 14px);
+    }
+    @include adaptive(desktop) {
+        @include createCol(5, 34px, 34px);
+    }
+}

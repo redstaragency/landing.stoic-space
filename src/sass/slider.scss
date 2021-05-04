@@ -1,0 +1,38 @@
+.page-slider {
+    position: relative;
+
+    .swiper-container {
+        max-width: 900px;
+        min-height: 125px;
+        margin: 0 auto;
+    }
+
+    .swiper-button-prev, 
+    .swiper-button-next {
+        color: #000;
+        transition: opacity 0.2s ease-in-out;
+
+        @include adaptive(beforeDesk) {
+            display: none;
+        }
+    }
+
+    .swiper-button-prev {
+        left: -60px;
+    }
+
+    .swiper-button-next {
+        right: -60px;
+    }
+
+    .swiper-button-disabled {
+        opacity: 0;
+    }
+}
+
+.page-section-black {
+    .swiper-button-prev, 
+    .swiper-button-next {
+        color: #fff;
+    }
+}

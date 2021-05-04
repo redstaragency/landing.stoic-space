@@ -1,0 +1,39 @@
+$mobile: 480px;
+$desktop: 1151px;
+$pad: 768px;
+
+@mixin adaptive($media){
+    @if $media == beforeDesk {
+        @media only screen and (max-width: $desktop - 1) {
+            @content
+        }
+			
+    } @else if $media == mobile {
+        @media only screen and (max-width: $pad - 1) {
+            @content
+        }			
+    } @else if $media == pad {
+        @media only screen and (min-width: $pad) and (max-width: $desktop - 1 ) {
+            @content
+        }			
+    } @else if $media == desktop {
+        @media only screen and (min-width: $desktop ) {
+            @content
+        }			
+    }
+}
+
+@mixin hoverDefault {
+    border: 2px solid #000;;
+    background-color: #000;
+    color: #fff;
+
+    cursor: default;
+
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #fff;
+        color: #000;
+    }
+}
