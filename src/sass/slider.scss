@@ -28,6 +28,10 @@
     .swiper-button-disabled {
         opacity: 0;
     }
+
+    .swiper-slide {
+        height: unset;
+    }
 }
 
 .page-section-black {
