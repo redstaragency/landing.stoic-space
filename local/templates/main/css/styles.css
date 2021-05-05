@@ -1076,6 +1076,7 @@ a {
 
 .page-h1 {
   margin: 0 0 40px;
+  font-family: "Steinbeck";
   font-size: 42px;
   line-height: 1.2;
 }
@@ -1088,6 +1089,7 @@ a {
 
 .page-h2 {
   margin: 0 0 30px;
+  font-family: "Steinbeck";
   font-size: 32px;
   line-height: 1.2;
 }
