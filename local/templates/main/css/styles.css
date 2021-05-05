@@ -962,7 +962,7 @@ body {
   font-size: 16px;
   line-height: 144%;
   font-weight: lighter;
-  font-family: "Stapel", "Arial", "Helvetica", sans-serif;
+  font-family: "Inter", "Arial", "Helvetica", sans-serif;
   color: #000;
 }
 
@@ -1992,6 +1992,7 @@ ul li + li {
   }
 }
 .page-header__logo {
+  font-family: "Stapel";
   font-size: 52px;
   font-weight: 300;
   line-height: 1;
