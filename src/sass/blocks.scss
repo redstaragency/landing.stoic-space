@@ -695,9 +695,9 @@
     &__inner {
         padding: 14px;
         align-items: center;
-        margin-bottom: 40px;
+        border-bottom: 1px solid #000;
         @include adaptive(beforeDesk) {
-            border-bottom: 1px solid #000;
+            margin-bottom: 40px;
         }
     }
 
@@ -821,11 +821,13 @@
     }
 
     .page-nav-main {
+        margin-bottom: 40px;
         @include adaptive(beforeDesk) {
             position: absolute;
             top: 100%;
             left: 100%;
             width: 100%;
+            margin-bottom: 0;
             background: #fff;
             
 

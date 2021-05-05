@@ -50,9 +50,9 @@ window.addEventListener('DOMContentLoaded', () => {
         $(this).siblings('[data-collapse="target"]').slideToggle();
     });
 
-    $(document).on('click', '[data-show-nav="trigger"]', function() {
+    $(document).on('click', '[data-show-nav="control"]', function() {
         $(this).toggleClass('is-active');
-        $(this).siblings('[data-show-nav="control"]').toggleClass('is-active');
+        $(this).closest('.page-header').find('[data-show-nav="target"]').toggleClass('is-active');
     });
     
 

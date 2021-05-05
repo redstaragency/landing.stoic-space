@@ -85,9 +85,9 @@ window.addEventListener('DOMContentLoaded', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('is-active');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).siblings('[data-collapse="target"]').slideToggle();
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '[data-show-nav="trigger"]', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '[data-show-nav="control"]', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('is-active');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).siblings('[data-show-nav="control"]').toggleClass('is-active');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.page-header').find('[data-show-nav="target"]').toggleClass('is-active');
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '[data-show-full="control"]', function () {
     var $control = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);

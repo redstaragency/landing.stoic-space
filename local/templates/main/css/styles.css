@@ -1966,11 +1966,11 @@ ul li + li {
 .page-header__inner {
   padding: 14px;
   align-items: center;
-  margin-bottom: 40px;
+  border-bottom: 1px solid #000;
 }
 @media only screen and (max-width: 1150px) {
   .page-header__inner {
-    border-bottom: 1px solid #000;
+    margin-bottom: 40px;
   }
 }
 .page-header__logo {
@@ -2077,12 +2077,16 @@ ul li + li {
   top: 19px;
   transform: rotate(45deg);
 }
+.page-header .page-nav-main {
+  margin-bottom: 40px;
+}
 @media only screen and (max-width: 1150px) {
   .page-header .page-nav-main {
     position: absolute;
     top: 100%;
     left: 100%;
     width: 100%;
+    margin-bottom: 0;
     background: #fff;
     transition: transform 0.2s ease-in-out;
   }
