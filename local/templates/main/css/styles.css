@@ -1077,7 +1077,7 @@ a {
 .page-h1 {
   margin: 0 0 40px;
   font-family: "Steinbeck";
-  font-size: 42px;
+  font-size: 50px;
   line-height: 1.2;
 }
 @media only screen and (max-width: 1150px) {
@@ -1090,7 +1090,7 @@ a {
 .page-h2 {
   margin: 0 0 30px;
   font-family: "Steinbeck";
-  font-size: 32px;
+  font-size: 40px;
   line-height: 1.2;
 }
 @media only screen and (max-width: 1150px) {
@@ -1102,7 +1102,7 @@ a {
 
 .page-h3 {
   margin: 0 0 20px;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.2;
 }
 @media only screen and (max-width: 1150px) {
@@ -1119,23 +1119,29 @@ p {
   line-height: 24px;
 }
 
-.page-intro p {
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: normal;
-}
-@media only screen and (max-width: 1150px) {
-  .page-intro p {
-    font-size: 16px;
-  }
-}
-
 .page-section p > b {
   font-size: 18px;
 }
 @media only screen and (max-width: 1150px) {
   .page-section p > b {
     font-size: 16px;
+  }
+}
+
+.page-intro p {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: normal;
+  text-align: center;
+}
+.page-intro p > b {
+  font-size: inherit;
+}
+@media only screen and (max-width: 1150px) {
+  .page-intro p {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
   }
 }
 
@@ -1186,6 +1192,15 @@ ul li + li {
   }
 }
 
+.page-intro {
+  margin-bottom: 120px;
+}
+@media only screen and (max-width: 1150px) {
+  .page-intro {
+    margin-bottom: 60px;
+  }
+}
+
 @media only screen and (max-width: 1150px) {
   .page-section > .page-section__header {
     padding: 0 15px;
@@ -1219,7 +1234,7 @@ ul li + li {
 }
 @media only screen and (min-width: 1151px) {
   .page-section__col--tg {
-    max-width: 365px;
+    max-width: 465px;
   }
 }
 @media only screen and (max-width: 1150px) {

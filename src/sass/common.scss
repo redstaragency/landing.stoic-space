@@ -121,7 +121,7 @@ a {
 .page-h1 {
     margin: 0 0 40px;
     font-family: 'Steinbeck';
-    font-size: 42px;
+    font-size: 50px;
     line-height: 1.2;
 
     @include adaptive(beforeDesk) {
@@ -133,7 +133,7 @@ a {
 .page-h2 {
     margin: 0 0 30px;
     font-family: 'Steinbeck';
-    font-size: 32px;
+    font-size: 40px;
     line-height: 1.2;
 
     @include adaptive(beforeDesk) {
@@ -144,7 +144,7 @@ a {
 
 .page-h3 {
     margin: 0 0 20px;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.2;
 
     @include adaptive(beforeDesk) {
@@ -159,16 +159,6 @@ p {
     font-size: 16px;
     line-height: 24px;
 }
-
-.page-intro p {
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: normal;
-
-    @include adaptive(beforeDesk) {
-        font-size: 16px;
-    }
-}
 .page-section p > b {
     font-size: 18px;
 
@@ -176,6 +166,24 @@ p {
         font-size: 16px;
     }
 }
+
+.page-intro p {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: normal;
+    text-align: center;
+
+    & > b {
+        font-size: inherit;
+    }
+
+    @include adaptive(beforeDesk) {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: left;
+    }
+}
+
 .page-section-black p,
 .page-section-black .page-h2 {
     color: #fff;
@@ -222,6 +230,13 @@ ul {
         }        
     }
 }
+.page-intro {
+    margin-bottom: 120px;
+
+    @include adaptive(beforeDesk) {
+        margin-bottom: 60px;
+    }
+}
 .page-section > .page-section__header {
     @include adaptive(beforeDesk) {
         padding: 0 15px;
@@ -242,7 +257,7 @@ ul {
 .page-section__col--tg {
     border: 2px solid #000;
     @include adaptive(desktop) {
-        max-width: 365px;
+        max-width: 465px;
     }
     @include adaptive(beforeDesk) {
         padding: 20px 15px;
