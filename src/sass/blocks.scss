@@ -740,6 +740,7 @@
 
         &:hover {
             background-color: #fff;
+            color: #FFD700;
         }
 
         @include adaptive(beforeDesk) {
