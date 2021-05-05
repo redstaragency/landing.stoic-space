@@ -1964,13 +1964,25 @@ ul li + li {
   position: relative;
 }
 .page-header__inner {
-  padding: 14px;
+  box-sizing: border-box;
+  padding: 15px 0;
   align-items: center;
   border-bottom: 1px solid #000;
 }
 @media only screen and (max-width: 1150px) {
   .page-header__inner {
     margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 1151px) {
+  .page-header__inner .page-nav.page-nav-main {
+    margin-bottom: 0;
+    padding-right: 10px;
+  }
+}
+@media only screen and (min-width: 1151px) {
+  .page-header__inner .page-nav__inner {
+    text-align: right;
   }
 }
 .page-header__logo {

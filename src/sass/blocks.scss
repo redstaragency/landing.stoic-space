@@ -693,11 +693,26 @@
 .page-header {
     position: relative;
     &__inner {
-        padding: 14px;
+        box-sizing: border-box;
+        padding: 15px 0;
         align-items: center;
         border-bottom: 1px solid #000;
         @include adaptive(beforeDesk) {
             margin-bottom: 40px;
+        }
+
+        .page-nav.page-nav-main {
+            @include adaptive(desktop) {
+                margin-bottom: 0;
+                padding-right: 10px;
+            }
+
+        }
+
+        .page-nav__inner {
+            @include adaptive(desktop) {
+                text-align: right;
+            }
         }
     }
 
