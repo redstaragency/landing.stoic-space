@@ -1968,6 +1968,7 @@ ul li + li {
   padding: 15px 0;
   align-items: center;
   border-bottom: 1px solid #000;
+  max-width: 1160px;
 }
 @media only screen and (max-width: 1150px) {
   .page-header__inner {
