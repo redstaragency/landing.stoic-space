@@ -1998,16 +1998,15 @@ ul li + li {
   font-weight: 500;
   font-size: 18px;
   line-height: 1;
-  border: 2px solid #000;
+  border: 2px solid #FFD700;
   text-transform: uppercase;
-  background-color: #000;
-  color: #fff;
+  background-color: #FFD700;
+  color: #000;
   white-space: nowrap;
   text-align: center;
   transition: 0.2s ease-in-out;
 }
 .page-header__btn:hover {
-  color: #000;
   background-color: #fff;
 }
 @media only screen and (max-width: 1150px) {
