@@ -42,7 +42,11 @@ const sameSlidersCreator = (elementsSelector) => {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    AOS.init();
+    AOS.init({
+        once: true,
+        offset: 100,
+        disable: 'mobile'
+    });
     sameSlidersCreator('[data-role="slider"]');
 
     $(document).on('click', '[data-collapse="control"]', function() {

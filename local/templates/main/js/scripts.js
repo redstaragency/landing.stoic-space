@@ -79,7 +79,11 @@ var sameSlidersCreator = function sameSlidersCreator(elementsSelector) {
 };
 
 window.addEventListener('DOMContentLoaded', function () {
-  aos__WEBPACK_IMPORTED_MODULE_2___default().init();
+  aos__WEBPACK_IMPORTED_MODULE_2___default().init({
+    once: true,
+    offset: 100,
+    disable: 'mobile'
+  });
   sameSlidersCreator('[data-role="slider"]');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '[data-collapse="control"]', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('is-active');

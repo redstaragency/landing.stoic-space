@@ -1573,7 +1573,7 @@ ul li + li {
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
-  color: #FFD700;
+  color: #D1E754;
 }
 
 .tarifs-w-sale .tarif__header {
@@ -1586,7 +1586,7 @@ ul li + li {
 }
 
 .tarif-rec {
-  border: 4px solid #FFD700;
+  border: 4px solid #D1E754;
 }
 @media only screen and (min-width: 768px) and (max-width: 1150px) {
   .tarif-rec {
@@ -1597,14 +1597,14 @@ ul li + li {
   display: block;
 }
 .tarif-rec .tarif__btn {
-  border: 2px solid #FFD700;
-  background-color: #FFD700;
+  border: 2px solid #D1E754;
+  background-color: #D1E754;
   color: #000;
   transition: 0.2s ease-in-out;
 }
 .tarif-rec .tarif__btn:hover {
   background-color: #fff;
-  color: #000;
+  color: #D1E754;
 }
 
 .faq-card + .faq-card {
