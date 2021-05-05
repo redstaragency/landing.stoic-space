@@ -97,6 +97,10 @@
     &__descr {
         box-sizing: border-box;
         padding: 0 20px 0 0;
+
+        @include adaptive(beforeDesk) {
+            padding: 0;
+        }
     }
     &__img {
         width: 290px;

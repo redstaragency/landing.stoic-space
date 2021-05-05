@@ -1398,6 +1398,11 @@ ul li + li {
   box-sizing: border-box;
   padding: 0 20px 0 0;
 }
+@media only screen and (max-width: 1150px) {
+  .image-card__descr {
+    padding: 0;
+  }
+}
 .image-card__img {
   width: 290px;
   height: 225px;
