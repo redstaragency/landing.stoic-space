@@ -529,8 +529,6 @@
 .card-info-check {
     position: relative;
     border: none;
-    // display: flex;
-    // align-items: flex-start;
     padding-bottom: 0;
     padding-top: 0;
     
@@ -539,7 +537,7 @@
         display: block;
         height: 40px;
         width: 40px;
-        margin: 0 auto 20px;
+        margin: 0 auto 10px;
 
         background-repeat: no-repeat;
         background-size: 60px;
@@ -548,16 +546,47 @@
 
         background-image: url("data:image/svg+xml,%3Csvg class='t508__checkmark' style='width:50px; height:50px;' fill='%23D1E754' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50.2 1.9C23.5 1.9 1.7 23.7 1.7 50.4s21.8 48.5 48.5 48.5 48.4-21.8 48.5-48.5c0-26.7-21.8-48.5-48.5-48.5zm-7.3 71.4L22.7 53.2l4.2-4.3 15.8 15.7 32.1-35.4 4.4 4-36.3 40.1z'%3E%3C/path%3E%3Cpath d='M50.2 1.9C23.5 1.9 1.7 23.7 1.7 50.4s21.8 48.5 48.5 48.5 48.4-21.8 48.5-48.5c0-26.7-21.8-48.5-48.5-48.5zm-7.3 71.4L22.7 53.2l4.2-4.3 15.8 15.7 32.1-35.4 4.4 4-36.3 40.1z'%3E%3C/path%3E%3C/svg%3E");
 
-        box-shadow: 0 0 55px 5px #D1E754;
-        
-    }
-
-    p {
-        position: relative;
-        z-index: 1;
-        font-weight: 500;
+        // box-shadow: 0 0 75px 6px #d1e754;
     }
 }
+
+
+.card-info-border {
+    border: none;
+    padding: 20px;
+    border-bottom: 2px solid #6861A5;
+
+    @include adaptive(mobile) {
+        border: 2px solid #6861A5;
+    }
+    p {
+        color: #474a51;
+        line-height: 2;
+    }
+    
+}
+
+.column:nth-child(odd) .card-info-border {
+    
+    @include adaptive(pad) {
+        border-right: 2px solid #6861A5;
+        padding-left: 0;
+    }
+    @include adaptive(desktop) {
+        border-right: 2px solid #6861A5;
+        padding-left: 0;
+    }
+}
+.column:last-child .card-info-border ,
+.column:nth-last-child(2) .card-info-border {
+    @include adaptive(pad) {
+        border-bottom: none;
+    }
+    @include adaptive(desktop) {
+        border-bottom: none;
+    }
+}
+
 
 //Автор
 .card-author {
@@ -740,25 +769,10 @@
         box-sizing: border-box;
         padding: 15px 0;
         align-items: center;
-        border-bottom: 1px solid #000;
         max-width: 1150px;
+        margin-bottom: 30px;
         @include adaptive(beforeDesk) {
-            margin-bottom: 40px;
             padding: 15px;
-        }
-
-        .page-nav.page-nav-main {
-            @include adaptive(desktop) {
-                margin-bottom: 0;
-                padding-right: 40px;
-            }
-
-        }
-
-        .page-nav__inner {
-            @include adaptive(desktop) {
-                text-align: right;
-            }
         }
     }
 
@@ -767,6 +781,20 @@
         font-size: 45px;
         font-weight: 300;
         line-height: 1;
+    }
+
+    .page-nav.page-nav-main {
+        @include adaptive(desktop) {
+            margin-bottom: 0;
+            padding: 0 40px 0 0;
+        }
+
+    }
+
+    .page-nav__inner {
+        @include adaptive(desktop) {
+            text-align: right;
+        }
     }
 
     .page-nav__link {
@@ -902,6 +930,7 @@
 
 //Новости перед шапкой
 .page-news {
+    margin-top: 10px;
     &__inner {
         position: relative;
         width: 100%;
