@@ -69,6 +69,7 @@ $pad: 768px;
         content: '';
         display: block;
         width: 0;
+        box-sizing: border-box;
         border: 1px solid $color;
         opacity: 0;
 

@@ -627,9 +627,7 @@
         display: inline-block;
         padding: 0 15px;
     }
-    &__link.active {
-        border: 1px solid #000;
-    }
+    &__link.active {}
 }
 .page-nav-main {
     padding: 15px 0;
@@ -747,12 +745,12 @@
     }          
 
     .page-nav__link.active {
-        border-color: #000;
-        text-transform: uppercase;
-        color: #000;
-        background-color: #fff;
-        white-space: nowrap;
         pointer-events: none;
+
+        &::after {
+            width: 100%;
+            opacity: 1;
+        }
     }
 
     &__dropdown-btn {

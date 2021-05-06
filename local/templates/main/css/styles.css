@@ -1946,10 +1946,6 @@ ul li + li {
   display: inline-block;
   padding: 0 15px;
 }
-.page-nav__link.active {
-  border: 1px solid #000;
-}
-
 .page-nav-main {
   padding: 15px 0;
 }
@@ -1986,6 +1982,7 @@ ul li + li {
   content: "";
   display: block;
   width: 0;
+  box-sizing: border-box;
   border: 1px solid #fff;
   opacity: 0;
   transition: 0.2s ease-in-out;
@@ -2046,6 +2043,7 @@ ul li + li {
   content: "";
   display: block;
   width: 0;
+  box-sizing: border-box;
   border: 1px solid #000;
   opacity: 0;
   transition: 0.2s ease-in-out;
@@ -2082,12 +2080,11 @@ ul li + li {
   }
 }
 .page-header .page-nav__link.active {
-  border-color: #000;
-  text-transform: uppercase;
-  color: #000;
-  background-color: #fff;
-  white-space: nowrap;
   pointer-events: none;
+}
+.page-header .page-nav__link.active::after {
+  width: 100%;
+  opacity: 1;
 }
 .page-header__dropdown-btn {
   order: 1;
