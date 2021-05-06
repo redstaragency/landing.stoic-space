@@ -1407,6 +1407,7 @@ ul li + li {
   line-height: 1;
 }
 .feature-number__descr {
+  font-size: 18px;
   font-weight: normal;
 }
 .feature-number .separator {
