@@ -123,19 +123,10 @@ a {
     font-size: 50px;
     line-height: 1.2;
 
-    @include underline;
+    @include underline(40px, 20px);
 
     @include adaptive(beforeDesk) {
         font-size: 32px;
-    }
-
-    &::after {
-        content: '';
-        display: block;
-        height: 40px;
-        @include adaptive(beforeDesk) {
-            height: 20px;
-        }
     }
 }
 
@@ -236,26 +227,30 @@ ul {
         }        
     }
 }
-// .page-intro 
-// {
-//     @include adaptive(beforeDesk) {
-//         margin-right: 15px;
-//         margin-left: 15px;
-//     }
+.page-intro 
+{
+    // @include adaptive(beforeDesk) {
+    //     margin-right: 15px;
+    //     margin-left: 15px;
+    // }
     
 
-//     .container {
-//         box-sizing: border-box;
-//         padding: 30px 0 50px 50px;
-//         border-left: 10px solid #000;
-//         box-shadow: 0 0 55px 10px #ccc;
-//         @include adaptive(beforeDesk) {
-//             padding: 20px 0 30px 20px;
-//             border-width: 5px;
-//             box-shadow: 0 0 35px 10px #ccc;
-//         }
-//     }
-// }
+    // .container {
+    //     box-sizing: border-box;
+    //     padding: 30px 0 50px 50px;
+    //     border-left: 10px solid #000;
+    //     box-shadow: 0 0 55px 10px #ccc;
+    //     @include adaptive(beforeDesk) {
+    //         padding: 20px 0 30px 20px;
+    //         border-width: 5px;
+    //         box-shadow: 0 0 35px 10px #ccc;
+    //     }
+    // }
+
+    b {
+        @include underlineInnerText;
+    }
+}
 .page-section > .page-section__header {
     @include adaptive(beforeDesk) {
         padding: 0 15px;
