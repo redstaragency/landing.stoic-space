@@ -124,8 +124,7 @@ a {
     font-size: 50px;
     line-height: 1.2;
 
-    background: linear-gradient(180deg,rgba(255,255,255,0) 60%,#D1E754 60%,#D1E754 85%,rgba(255,255,255,0) 85%,rgba(255,255,255,0) 100% );
-    display: inline-block;
+    @include underline;
 
     @include adaptive(beforeDesk) {
         margin: 0 0 20px;
@@ -263,7 +262,8 @@ ul {
 .page-subsection-border {
     padding: 40px;
 
-    @include hoverDefault;
+    // @mixin hoverDefault($bg-color, $color, $bg-color-h, $color-h)
+    @include hoverDefault(#000, #fff, #fff, #000);
 }
 .page-section__col--form {
     padding-left: 0;

@@ -23,17 +23,39 @@ $pad: 768px;
     }
 }
 
-@mixin hoverDefault {
-    border: 2px solid #000;;
-    background-color: #000;
-    color: #fff;
+@mixin hoverDefault($bg-color, $color, $bg-color-h, $color-h) {
+    border: 2px solid $bg-color;
+    background-color: $bg-color;
+    color: $color;
 
     cursor: default;
 
     transition: 0.2s ease-in-out;
 
     &:hover {
-        background-color: #fff;
-        color: #000;
+        background-color: $bg-color-h;
+        color: $color-h;
+    }
+}
+
+@mixin underline {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 60%,#D1E754 60%,#D1E754 85%,rgba(255,255,255,0) 85%,rgba(255,255,255,0) 100% );
+    display: inline-block;
+}
+
+@mixin hoverUnderline($color) {
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        border: 1px solid $color;
+        opacity: 0;
+
+        transition: 0.2s ease-in-out;
+    }
+    &:hover::after {
+        width: 100%;
+        opacity: 1;
     }
 }
