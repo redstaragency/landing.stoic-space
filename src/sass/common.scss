@@ -119,22 +119,28 @@ a {
 }
 
 .page-h1 {
-    margin: 0 0 40px;
-    font-family: 'Steinbeck';
+    margin: 0;
     font-size: 50px;
     line-height: 1.2;
 
     @include underline;
 
     @include adaptive(beforeDesk) {
-        margin: 0 0 20px;
         font-size: 32px;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        height: 40px;
+        @include adaptive(beforeDesk) {
+            height: 20px;
+        }
     }
 }
 
 .page-h2 {
     margin: 0 0 30px;
-    font-family: 'Steinbeck';
     font-size: 40px;
     line-height: 1.2;
 

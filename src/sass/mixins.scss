@@ -40,7 +40,7 @@ $pad: 768px;
 
 @mixin underline {
     background: linear-gradient(180deg,rgba(255,255,255,0) 60%,#D1E754 60%,#D1E754 85%,rgba(255,255,255,0) 85%,rgba(255,255,255,0) 100% );
-    display: inline-block;
+    display: inline;
 }
 
 @mixin hoverUnderline($color) {
