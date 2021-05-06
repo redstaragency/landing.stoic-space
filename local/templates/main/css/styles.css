@@ -2374,7 +2374,7 @@ ul li + li {
 }
 
 .page-news {
-  margin-top: 10px;
+  background-color: #6861A5;
 }
 .page-news__inner {
   position: relative;
@@ -2391,9 +2391,9 @@ ul li + li {
 }
 .page-news__link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 23px;
-  color: #6861A5;
+  color: #fff;
 }
 @media only screen and (max-width: 1150px) {
   .page-news__link {
@@ -2407,7 +2407,7 @@ ul li + li {
   height: 37px;
   margin: 0 0 0 20px;
   background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='37' height='37' viewBox='0 0 37 37' fill='none'%3E%3Cpath d='M18.5 0.578003C8.59903 0.578003 0.578125 8.60007 0.578125 18.4999C0.578125 28.3997 8.60019 36.4218 18.5 36.4218C28.401 36.4218 36.4219 28.3997 36.4219 18.4999C36.4219 8.60007 28.3998 0.578003 18.5 0.578003ZM27.3025 12.8562L24.361 26.7173C24.1437 27.7002 23.5586 27.9383 22.7423 27.4758L18.2618 24.1736L16.1008 26.2548C15.8626 26.493 15.6602 26.6954 15.1978 26.6954L15.5157 22.1351L23.8188 14.6334C24.1807 14.3154 23.739 14.135 23.2614 14.453L12.9997 20.913L8.57706 19.5324C7.61622 19.2295 7.59425 18.5716 8.77941 18.1091L26.0584 11.4456C26.8608 11.1565 27.5615 11.641 27.3014 12.8551L27.3025 12.8562Z' fill='%236861A5'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='37' height='37' viewBox='0 0 37 37' fill='none'%3E%3Cpath d='M18.5 0.578003C8.59903 0.578003 0.578125 8.60007 0.578125 18.4999C0.578125 28.3997 8.60019 36.4218 18.5 36.4218C28.401 36.4218 36.4219 28.3997 36.4219 18.4999C36.4219 8.60007 28.3998 0.578003 18.5 0.578003ZM27.3025 12.8562L24.361 26.7173C24.1437 27.7002 23.5586 27.9383 22.7423 27.4758L18.2618 24.1736L16.1008 26.2548C15.8626 26.493 15.6602 26.6954 15.1978 26.6954L15.5157 22.1351L23.8188 14.6334C24.1807 14.3154 23.739 14.135 23.2614 14.453L12.9997 20.913L8.57706 19.5324C7.61622 19.2295 7.59425 18.5716 8.77941 18.1091L26.0584 11.4456C26.8608 11.1565 27.5615 11.641 27.3014 12.8551L27.3025 12.8562Z' fill='%23fff'/%3E%3C/svg%3E");
 }
 @media only screen and (max-width: 1150px) {
   .page-news__icon {
@@ -2417,13 +2417,16 @@ ul li + li {
 .page-news .btn-close {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 0;
 }
 @media only screen and (max-width: 1150px) {
   .page-news .btn-close {
     top: 5px;
     right: 5px;
   }
+}
+.page-news .btn-close::before, .page-news .btn-close::after {
+  border-color: #fff;
 }
 
 .btn-close {
@@ -2437,7 +2440,7 @@ ul li + li {
   display: block;
   position: absolute;
   width: 21px;
-  border: 1px solid #6861A5;
+  border: 1px solid #000;
   transition: 0.2s ease-in-out;
 }
 .btn-close::before {
