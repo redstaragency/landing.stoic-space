@@ -897,7 +897,7 @@ button.swiper-pagination-bullet {
     margin-right: 0;
   }
   .column-3-m-w-20:nth-child(n+4) {
-    margin-top: 20px;
+    margin-top: 30px;
   }
   .column-3-m-w-20:last-child {
     margin-right: 0;
@@ -1297,9 +1297,22 @@ ul li + li {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 200px 0;
+  min-height: 460px;
+  margin-bottom: 30px;
+  margin-right: 30px;
   box-sizing: content-box;
   max-width: 45%;
+}
+@media only screen and (max-width: 1150px) {
+  .decor-shape-block {
+    max-width: 50%;
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .decor-shape-block {
+    max-width: 100%;
+  }
 }
 .decor-shape-block .circle {
   position: absolute;
@@ -1310,7 +1323,6 @@ ul li + li {
   height: 300px;
   background-color: #6861A5;
   border-radius: 100%;
-  box-shadow: 0 0 55px 10px #6861A5;
 }
 .decor-shape-block .rect {
   position: absolute;
@@ -1320,6 +1332,18 @@ ul li + li {
   height: 200px;
   background-color: #fff;
   border: 4px solid #6861A5;
+}
+.decor-shape-block .triangle {
+  position: absolute;
+  right: calc(50% - 200px);
+  bottom: calc(50% - 200px);
+  transform: rotate(-45deg);
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg width='236' height='204' viewBox='0 0 236 204' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.14875 200L118 7.99999L228.851 200H7.14875Z' stroke='%236861A5' stroke-width='8'/%3E%3C/svg%3E%0A");
 }
 .decor-shape-block .page-h3 {
   z-index: 2;
@@ -1977,9 +2001,25 @@ ul li + li {
   }
 }
 
-.card-info-slide {
-  background-color: rgba(104, 97, 165, 0.1);
-  border: 2px solid #6861a5;
+.card-info-fill {
+  border: none;
+  background-color: #fff;
+}
+.card-info-fill .card-info__title {
+  font-weight: bold;
+  font-size: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, #D1E754 60%, #D1E754 85%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0) 100%);
+  display: inline;
+}
+.card-info-fill .card-info__title::after {
+  content: "";
+  display: block;
+  height: 20px;
+}
+@media only screen and (max-width: 1150px) {
+  .card-info-fill .card-info__title::after {
+    height: 20px;
+  }
 }
 
 .card-author {

@@ -26,7 +26,7 @@
         font-weight: bold;
         letter-spacing: 0.05em;
 
-        @include underline(10px, 5px);
+        @include underline(#D1E754, 10px, 5px);
     }
     &__descr {
         // font-size: 20px;
@@ -585,9 +585,15 @@
     }
 }
 
-.card-info-slide {
-    background-color: rgba(104, 97, 165, 0.1);
-    border: 2px solid rgba(104, 97, 165, 1);
+.card-info-fill {
+    border: none;
+    background-color: #fff;
+
+    .card-info__title {
+        font-weight: bold;
+        font-size: 20px;
+        @include underline(#D1E754, 20px, 20px);
+    }
 }
 
 //Автор

@@ -38,8 +38,8 @@ $pad: 768px;
     }
 }
 
-@mixin underline($mb, $mb-m) {
-    background: linear-gradient(180deg,rgba(255,255,255,0) 60%,#D1E754 60%,#D1E754 85%,rgba(255,255,255,0) 85%,rgba(255,255,255,0) 100% );
+@mixin underline($color, $mb, $mb-m) {
+    background: linear-gradient(180deg,rgba(255,255,255,0) 60%, #{$color} 60%, #{$color} 85%,rgba(255,255,255,0) 85%,rgba(255,255,255,0) 100% );
     display: inline;
 
     &::after {
@@ -103,14 +103,15 @@ $pad: 768px;
     }   
 }
 
-@mixin triangle($w, $h, $bgc, $shadow) {
+@mixin triangle($w, $h) {
     width: $w;
     height: $h;
     
-    background-color: $bgc;
-    @if $shadow != 0 {
-        box-shadow: $shadow;
-    }   
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    
+    background-image: url("data:image/svg+xml,%3Csvg width='236' height='204' viewBox='0 0 236 204' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.14875 200L118 7.99999L228.851 200H7.14875Z' stroke='%236861A5' stroke-width='8'/%3E%3C/svg%3E%0A");
 }
 
 
