@@ -1079,6 +1079,8 @@ a {
   font-family: "Steinbeck";
   font-size: 50px;
   line-height: 1.2;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, #D1E754 60%, #D1E754 85%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0) 100%);
+  display: inline-block;
 }
 @media only screen and (max-width: 1150px) {
   .page-h1 {
@@ -1999,7 +2001,7 @@ ul li + li {
   padding: 15px 0;
   align-items: center;
   border-bottom: 1px solid #000;
-  max-width: 1160px;
+  max-width: 1150px;
 }
 @media only screen and (max-width: 1150px) {
   .page-header__inner {
