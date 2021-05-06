@@ -104,6 +104,9 @@ window.addEventListener('DOMContentLoaded', function () {
       $control.text($control.data('name-default'));
     }
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '[data-close="control"]', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('[data-close="target"]').slideUp();
+  });
 });
 
 /***/ }),

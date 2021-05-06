@@ -59,7 +59,6 @@ window.addEventListener('DOMContentLoaded', () => {
         $(this).closest('.page-header').find('[data-show-nav="target"]').toggleClass('is-active');
     });
     
-
     $(document).on('click', '[data-show-full="control"]', function() {
         const $control = $(this);
         const $target =  $control.siblings('[data-show-full="target"]');
@@ -71,5 +70,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    $(document).on('click', '[data-close="control"]', function() {
+        $(this).closest('[data-close="target"]').slideUp();
+    });
     
 });
