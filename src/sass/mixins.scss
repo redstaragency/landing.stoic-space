@@ -81,4 +81,37 @@ $pad: 768px;
     }
 }
 
+@mixin circle($w, $h, $bgc, $shadow) {
+    width: $w;
+    height: $h;
+    
+    background-color: $bgc;
+    border-radius: 100%;
+    @if $shadow != 0 {
+        box-shadow: $shadow;
+    }   
+}
+
+
+@mixin rect($w, $h, $bgc, $shadow) {
+    width: $w;
+    height: $h;
+    
+    background-color: $bgc;
+    @if $shadow != 0 {
+        box-shadow: $shadow;
+    }   
+}
+
+@mixin triangle($w, $h, $bgc, $shadow) {
+    width: $w;
+    height: $h;
+    
+    background-color: $bgc;
+    @if $shadow != 0 {
+        box-shadow: $shadow;
+    }   
+}
+
+
 // #474a51
