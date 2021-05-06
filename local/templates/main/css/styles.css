@@ -1123,9 +1123,18 @@ a {
 
 p {
   margin: 0;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+@media only screen and (max-width: 1150px) {
+  p {
+    font-size: 16px;
+  }
+}
+
+.semibold {
+  font-weight: 500;
 }
 
 .page-section p > b {
@@ -1290,6 +1299,7 @@ ul li + li {
   align-items: center;
   padding: 200px 0;
   box-sizing: content-box;
+  max-width: 45%;
 }
 .decor-shape-block .circle {
   position: absolute;
@@ -1338,7 +1348,7 @@ ul li + li {
 @media only screen and (min-width: 1151px) {
   .page-section-decor .rect {
     position: absolute;
-    bottom: -50px;
+    bottom: -200px;
     right: -75px;
     box-sizing: border-box;
     width: 150px;
@@ -1434,8 +1444,8 @@ ul li + li {
   }
 }
 .card-note__descr {
-  font-size: 20px;
   font-weight: 500;
+  color: #474a51;
 }
 
 .quote {
@@ -1492,12 +1502,13 @@ ul li + li {
 .feature-number__descr {
   font-size: 18px;
   font-weight: normal;
+  color: #474a51;
 }
 .feature-number .separator {
   margin-top: 14px;
   margin-bottom: 14px;
   border: 0;
-  border-top: 3px solid #000;
+  border-top: 2px solid #474a51;
 }
 
 .image-card {
@@ -1886,19 +1897,6 @@ ul li + li {
   margin: 0 0 23px;
 }
 
-.card-info--p30 {
-  padding: 30px;
-}
-
-.card-info--p40 {
-  padding: 30px 30px 40px;
-}
-
-.card-info--bg {
-  background-color: rgba(204, 204, 204, 0.2);
-  border: none;
-}
-
 .card-info-liner {
   border: none;
   padding: 0;
@@ -1912,6 +1910,7 @@ ul li + li {
 }
 .card-info-liner .card-info__descr {
   padding: 0 20px;
+  color: #474a51;
 }
 
 .card-info-check {
@@ -1931,6 +1930,25 @@ ul li + li {
   background-position: center;
   background-image: url("data:image/svg+xml,%3Csvg class='t508__checkmark' style='width:50px; height:50px;' fill='%23D1E754' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50.2 1.9C23.5 1.9 1.7 23.7 1.7 50.4s21.8 48.5 48.5 48.5 48.4-21.8 48.5-48.5c0-26.7-21.8-48.5-48.5-48.5zm-7.3 71.4L22.7 53.2l4.2-4.3 15.8 15.7 32.1-35.4 4.4 4-36.3 40.1z'%3E%3C/path%3E%3Cpath d='M50.2 1.9C23.5 1.9 1.7 23.7 1.7 50.4s21.8 48.5 48.5 48.5 48.4-21.8 48.5-48.5c0-26.7-21.8-48.5-48.5-48.5zm-7.3 71.4L22.7 53.2l4.2-4.3 15.8 15.7 32.1-35.4 4.4 4-36.3 40.1z'%3E%3C/path%3E%3C/svg%3E");
 }
+.card-info-check p {
+  color: #474a51;
+}
+
+.cards-info-border {
+  position: relative;
+}
+.cards-info-border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border: 2px solid #fff;
+}
+@media only screen and (max-width: 767px) {
+  .cards-info-border::after {
+    opacity: 0;
+  }
+}
 
 .card-info-border {
   border: none;
@@ -1944,7 +1962,6 @@ ul li + li {
 }
 .card-info-border p {
   color: #474a51;
-  line-height: 2;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1150px) {
@@ -1960,19 +1977,14 @@ ul li + li {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1150px) {
-  .column:last-child .card-info-border,
-.column:nth-last-child(2) .card-info-border {
-    border-bottom: none;
-  }
-}
-@media only screen and (min-width: 1151px) {
-  .column:last-child .card-info-border,
-.column:nth-last-child(2) .card-info-border {
-    border-bottom: none;
-  }
+.card-info-slide {
+  background-color: rgba(104, 97, 165, 0.1);
+  border: 2px solid #6861a5;
 }
 
+.card-author {
+  text-align: center;
+}
 .card-author__img {
   width: 120px;
   height: 120px;
@@ -1992,8 +2004,8 @@ ul li + li {
 }
 .card-author__info {
   font-size: 16px;
-  line-height: 24px;
-  color: rgba(0, 0, 0, 0.5);
+  color: #474a51;
+  opacity: 0.8;
 }
 
 .card-review {
@@ -2103,6 +2115,7 @@ ul li + li {
   display: inline-block;
   padding: 0 15px;
 }
+
 .page-nav-main {
   padding: 15px 0;
 }

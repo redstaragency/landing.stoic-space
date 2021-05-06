@@ -29,8 +29,9 @@
         @include underline(10px, 5px);
     }
     &__descr {
-        font-size: 20px;
+        // font-size: 20px;
         font-weight: 500;
+        color: #474a51;
     }
 }
 //Цитата
@@ -90,13 +91,14 @@
     &__descr {
         font-size: 18px;
         font-weight: normal;
+        color: #474a51;
     }
 
     .separator {
         margin-top: 14px;
         margin-bottom: 14px;
         border: 0;
-        border-top: 3px solid #000;
+        border-top: 2px solid #474a51;
     }
 }
 
@@ -496,18 +498,6 @@
         margin: 0 0 23px;
     }
 }
-.card-info--p30 {
-    padding: 30px;
-}
-
-.card-info--p40 {
-    padding: 30px 30px 40px;
-}
-
-.card-info--bg {
-    background-color: rgba(204, 204, 204, 0.2);
-    border: none;
-}
 
 .card-info-liner {
     border: none;
@@ -523,6 +513,7 @@
 
     .card-info__descr {
         padding: 0 20px;
+        color: #474a51;
     }
 }
 
@@ -548,9 +539,27 @@
 
         // box-shadow: 0 0 75px 6px #d1e754;
     }
+
+    p {
+        color: #474a51;
+    }
 }
 
+.cards-info-border {
+    position: relative;
 
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border: 2px solid #fff;
+
+        @include adaptive(mobile) {
+            opacity: 0;
+        }
+    }
+}
 .card-info-border {
     border: none;
     padding: 20px;
@@ -561,11 +570,9 @@
     }
     p {
         color: #474a51;
-        line-height: 2;
     }
     
 }
-
 .column:nth-child(odd) .card-info-border {
     
     @include adaptive(pad) {
@@ -577,19 +584,15 @@
         padding-left: 0;
     }
 }
-.column:last-child .card-info-border ,
-.column:nth-last-child(2) .card-info-border {
-    @include adaptive(pad) {
-        border-bottom: none;
-    }
-    @include adaptive(desktop) {
-        border-bottom: none;
-    }
-}
 
+.card-info-slide {
+    background-color: rgba(104, 97, 165, 0.1);
+    border: 2px solid rgba(104, 97, 165, 1);
+}
 
 //Автор
 .card-author {
+    text-align: center;
     &__img {
         width: 120px;
         height: 120px;
@@ -608,8 +611,8 @@
     }
     &__info {
         font-size: 16px;
-        line-height: 24px;
-        color: $basic-color-50p;
+        color: #474a51;
+        opacity: 0.8;
     }
 }
 
@@ -713,7 +716,6 @@
         display: inline-block;
         padding: 0 15px;
     }
-    &__link.active {}
 }
 .page-nav-main {
     padding: 15px 0;

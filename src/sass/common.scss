@@ -154,9 +154,16 @@ a {
 
 p {
     margin: 0;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    @include adaptive(beforeDesk) {
+        font-size: 16px;
+    }
+}
+.semibold {
+    font-weight: 500;
 }
 .page-section p > b {
     font-size: 18px;
@@ -323,6 +330,7 @@ ul {
     align-items: center;
     padding: 200px 0;
     box-sizing: content-box;
+    max-width: 45%;
 
     .circle {
         position: absolute;
@@ -367,7 +375,7 @@ ul {
     .rect {
         @include adaptive(desktop) {
             position: absolute;
-            bottom: -50px;
+            bottom: -200px;
             right: -75px;
             box-sizing: border-box;
             @include rect(150px, 150px, transparent, 0);
