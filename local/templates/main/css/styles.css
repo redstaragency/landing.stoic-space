@@ -1772,11 +1772,16 @@ ul li + li {
 .faq-card__qst {
   position: relative;
   padding: 30px;
-  border: 2px solid #000;
-  background-color: #000;
-  transition: 0.2s ease-in-out;
+  border: 2px solid #6861A5;
+  background-color: #6861A5;
   color: #fff;
+  cursor: default;
+  transition: 0.2s ease-in-out;
   cursor: pointer;
+}
+.faq-card__qst:hover {
+  background-color: #fff;
+  color: #6861A5;
 }
 @media only screen and (max-width: 1150px) {
   .faq-card__qst {
@@ -1803,12 +1808,12 @@ ul li + li {
     right: 15px;
   }
 }
-.faq-card__qst:hover, .faq-card__qst.is-active {
+.faq-card__qst.is-active {
   background-color: #fff;
-  color: #000;
+  color: #6861A5;
 }
 .faq-card__qst:hover::after, .faq-card__qst.is-active::after {
-  background: linear-gradient(#000, #000), linear-gradient(#000, #000);
+  background: linear-gradient(#6861A5, #6861A5), linear-gradient(#6861A5, #6861A5);
   background-position: center;
   background-size: 50% 2px, 2px 50%;
   background-repeat: no-repeat;

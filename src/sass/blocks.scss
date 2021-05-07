@@ -340,14 +340,12 @@
 .faq-card {
     &__qst {
         position: relative;
-        padding: 30px;
-        border: 2px solid #000;
-        background-color: #000;
-        transition: 0.2s ease-in-out;
-        color: #fff;
+        padding: 30px;      
+
+        // hoverDefault($bg-color, $color, $bg-color-h, $color-h) 
+        @include hoverDefault(#6861A5, #fff, #fff, #6861A5);
         cursor: pointer;
 
-        
         @include adaptive(beforeDesk) {
             min-height: 50px;
             padding: 15px 65px 15px 15px;
@@ -362,7 +360,6 @@
             width:50px;
             height:50px;       
             
-            
             background:
                 linear-gradient(#fff,#fff),
                 linear-gradient(#fff,#fff);
@@ -376,16 +373,17 @@
             }
         }
 
-        &:hover,
+
         &.is-active {
             background-color: #fff;
-            color: #000;
+            color: #6861A5;
         }
+        
         &:hover::after,
         &.is-active::after {
             background:
-            linear-gradient(#000,#000),
-            linear-gradient(#000,#000);
+            linear-gradient(#6861A5,#6861A5),
+            linear-gradient(#6861A5,#6861A5);
             background-position:center;
             background-size: 50% 2px,2px 50%;
             background-repeat:no-repeat;
