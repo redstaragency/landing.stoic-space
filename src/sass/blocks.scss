@@ -8,11 +8,16 @@
     padding: 20px;
     margin: -20px 0 0 12px;
     
-    // @mixin hoverDefault($bg-color, $color, $bg-color-h, $color-h)
-    @include hoverDefault(#6861A5, #fff, #fff, #6861A5);
+    background-color: rgba(209, 231, 84, 0.3);
+    
+    border-radius: 10px;
 
     @include adaptive(beforeDesk) {
        margin: 20px 0 0;
+    }
+
+    b {
+        @include underlineInnerText
     }
 }
 .card-note {
@@ -45,6 +50,7 @@
     box-sizing: border-box;
     padding: 20px;
 
+    border: 4px solid #6861A5;
     cursor: default;
     
     &__desr {
@@ -747,7 +753,7 @@
 //Подвал
 .page-footer {
     box-sizing: border-box;
-    padding: 35px 10px 90px;
+    padding: 35px 10px 10px;
     background-color: #000;
 
     
