@@ -18,7 +18,7 @@ body {
 
     font-size: 16px;
     line-height: 144%;
-    font-weight: lighter;
+    font-weight: normal;
     font-family: $body-font;
     color: $basic-color;
 
@@ -205,14 +205,26 @@ ul {
         align-items: flex-start;
         justify-content: flex-start;
 
+        font-size: 18px;
+        line-height: 1.5;
+
+        @include adaptive(beforeDesk) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
         &::before {
             content: '';
             display: block;
             min-width: 10px;
-            min-height: 2px;
+            min-height: 10px;
             margin-right: 10px;
             margin-top: 10px;
-            background-color: #000;
+            background-color: #D1E754;
+
+            @include adaptive(beforeDesk) {
+                margin-top: 6px;
+            }
         }
         & + li {
             margin-top: 10px;
@@ -398,11 +410,23 @@ ul {
             position: absolute;
             bottom: -200px;
             right: -75px;
+            z-index: 1;
             box-sizing: border-box;
             @include rect(150px, 150px, transparent, 0);
             border: 4px solid #6861A5;
             transform: rotate(45deg);
         }        
+    }
+
+    .triangle {
+        @include adaptive(desktop) {
+            position: absolute;
+            z-index: 1;
+            left: -50px;
+            bottom: -150px;
+            transform: rotate(35deg);
+            @include triangle(200px, 200px);
+        }
     }
 }  
 
