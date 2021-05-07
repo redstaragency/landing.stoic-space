@@ -9,7 +9,7 @@
     margin: -20px 0 0 12px;
     
     // @mixin hoverDefault($bg-color, $color, $bg-color-h, $color-h)
-    @include hoverDefault(#000, #fff, #fff, #000);
+    @include hoverDefault(#6861A5, #fff, #fff, #6861A5);
 
     @include adaptive(beforeDesk) {
        margin: 20px 0 0;
@@ -207,7 +207,7 @@
     padding: 30px 10px 20px;
     text-align: center;
 
-    border: 2px solid #000;
+    border: 2px solid #6861A5;
 
     @include adaptive(mobile) {
         min-height: unset;
@@ -244,7 +244,7 @@
 
 
         // @mixin hoverDefault($bg-color, $color, $bg-color-h, $color-h)
-        @include hoverDefault(#000, #fff, #fff, #000);
+        @include hoverDefault(#6861A5, #fff, #fff, #6861A5);
         cursor: pointer;
     }
     
