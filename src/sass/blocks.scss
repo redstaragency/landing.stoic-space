@@ -427,7 +427,7 @@
         margin-bottom: 20px;
         font-size: 16px;
         line-height: 24px;
-        border: 2px solid #000;
+        border: 2px solid #D1E754;
         outline: none;
     }
     &__btn {
@@ -441,7 +441,7 @@
         text-transform: uppercase;
         outline: none;
         // @mixin hoverDefault($bg-color, $color, $bg-color-h, $color-h)
-        @include hoverDefault(#000, #fff, #fff, #000);
+        @include hoverDefault(#D1E754, #000, #fff, #D1E754);
         cursor: pointer;
 
         @include adaptive(beforeDesk) {
@@ -584,13 +584,30 @@
 }
 
 .card-info-fill {
+    position: relative;
     border: none;
     background-color: #fff;
+    &::after {
+        counter-increment: results;
+        content: counter(results);
 
+        position: absolute;
+        top: 0;
+        left: -30px;
+        font-size: 150px;
+        line-height: 1;
+        font-weight: bold;
+        color: rgba(209, 231, 85, 0.3);
+    }
     .card-info__title {
+        position: relative;
+        z-index: 1;
         font-weight: bold;
         font-size: 20px;
         @include underline(#D1E754, 20px, 20px);
+    }
+    .card-info__descr {
+        font-weight: 500;
     }
 }
 
@@ -631,9 +648,7 @@
         flex-grow: 1;
         box-sizing: border-box;
         padding: 20px 20px 54px;
-        
-        // @mixin hoverDefault($bg-color, $color, $bg-color-h, $color-h)
-        @include hoverDefault(#000, #fff, #fff, #000);
+        border: 4px solid #D1E754;
     }
 
     &__footer {
@@ -704,11 +719,11 @@
     padding: 12px;
     text-align: center;
     text-transform: uppercase;
-    font-weight: normal;
     line-height: 1;
+    font-weight: 500;
 
     // @mixin hoverDefault($bg-color, $color, $bg-color-h, $color-h)
-    @include hoverDefault(#000, #fff, #fff, #000);
+    @include hoverDefault(#D1E754, #000, #fff, #D1E754);
     cursor: pointer;
 }
 

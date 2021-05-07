@@ -964,6 +964,7 @@ body {
   font-weight: lighter;
   font-family: "Inter", "Arial", "Helvetica", sans-serif;
   color: #000;
+  counter-reset: results;
 }
 
 button, input {
@@ -1856,7 +1857,7 @@ ul li + li {
   margin-bottom: 20px;
   font-size: 16px;
   line-height: 24px;
-  border: 2px solid #000;
+  border: 2px solid #D1E754;
   outline: none;
 }
 .callback-form__btn {
@@ -1869,16 +1870,16 @@ ul li + li {
   font-weight: normal;
   text-transform: uppercase;
   outline: none;
-  border: 2px solid #000;
-  background-color: #000;
-  color: #fff;
+  border: 2px solid #D1E754;
+  background-color: #D1E754;
+  color: #000;
   cursor: default;
   transition: 0.2s ease-in-out;
   cursor: pointer;
 }
 .callback-form__btn:hover {
   background-color: #fff;
-  color: #000;
+  color: #D1E754;
 }
 @media only screen and (max-width: 1150px) {
   .callback-form__btn {
@@ -2007,10 +2008,24 @@ ul li + li {
 }
 
 .card-info-fill {
+  position: relative;
   border: none;
   background-color: #fff;
 }
+.card-info-fill::after {
+  counter-increment: results;
+  content: counter(results);
+  position: absolute;
+  top: 0;
+  left: -30px;
+  font-size: 150px;
+  line-height: 1;
+  font-weight: bold;
+  color: rgba(209, 231, 85, 0.3);
+}
 .card-info-fill .card-info__title {
+  position: relative;
+  z-index: 1;
   font-weight: bold;
   font-size: 20px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, #D1E754 60%, #D1E754 85%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0) 100%);
@@ -2025,6 +2040,9 @@ ul li + li {
   .card-info-fill .card-info__title::after {
     height: 20px;
   }
+}
+.card-info-fill .card-info__descr {
+  font-weight: 500;
 }
 
 .card-author {
@@ -2064,15 +2082,7 @@ ul li + li {
   flex-grow: 1;
   box-sizing: border-box;
   padding: 20px 20px 54px;
-  border: 2px solid #000;
-  background-color: #000;
-  color: #fff;
-  cursor: default;
-  transition: 0.2s ease-in-out;
-}
-.card-review__descr:hover {
-  background-color: #fff;
-  color: #000;
+  border: 4px solid #D1E754;
 }
 .card-review__footer {
   margin-top: -40px;
@@ -2139,18 +2149,18 @@ ul li + li {
   padding: 12px;
   text-align: center;
   text-transform: uppercase;
-  font-weight: normal;
   line-height: 1;
-  border: 2px solid #000;
-  background-color: #000;
-  color: #fff;
+  font-weight: 500;
+  border: 2px solid #D1E754;
+  background-color: #D1E754;
+  color: #000;
   cursor: default;
   transition: 0.2s ease-in-out;
   cursor: pointer;
 }
 .btn-more:hover {
   background-color: #fff;
-  color: #000;
+  color: #D1E754;
 }
 
 .page-nav {

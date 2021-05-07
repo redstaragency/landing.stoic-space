@@ -21,6 +21,8 @@ body {
     font-weight: lighter;
     font-family: $body-font;
     color: $basic-color;
+
+    counter-reset: results;
 }
 button, input {
     border: none;
