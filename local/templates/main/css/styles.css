@@ -1476,7 +1476,7 @@ ul li + li {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: #000;
   opacity: 0.2;
 }
 .video-banner__video {
