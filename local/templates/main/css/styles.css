@@ -2387,7 +2387,7 @@ ul li + li {
   cursor: pointer;
 }
 .page-header__btn:hover {
-  background-color: #fff;
+  background-color: transparent;
   color: #D1E754;
 }
 @media only screen and (max-width: 1150px) {

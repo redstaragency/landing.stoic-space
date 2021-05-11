@@ -906,7 +906,7 @@
         text-align: center;
 
         // @mixin hoverDefault($bg-color, $color, $bg-color-h, $color-h)
-        @include hoverDefault(#D1E754, #000, #fff, #D1E754);
+        @include hoverDefault(#D1E754, #000, transparent, #D1E754);
         cursor: pointer;
         @include adaptive(beforeDesk) {
             order: -1;
