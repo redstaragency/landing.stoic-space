@@ -39,6 +39,25 @@
         height: 100%;
         object-fit: cover;
     }
+    &__content {
+        position: relative;
+        top: 300px;
+        z-index: 1;
+        max-width: 60%;
+
+        p {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 1.5;
+            color: #fff;
+        }  
+    }
+
+
+    .btn-buy {
+        display: inline-block;
+        margin-top: 20px;
+    }
 
 }
 
@@ -871,6 +890,7 @@
         font-size: 45px;
         font-weight: 300;
         line-height: 1;
+        color: #fff;
     }
 
     .page-nav.page-nav-main {
@@ -893,31 +913,31 @@
         font-weight: normal;
         padding: 14px 12px;
         white-space: nowrap;
-        color: #000;
+        color: #fff;
         font-weight: 500;
 
-        @include hoverUnderline(#000);
+        @include hoverUnderline(#fff);
     }
 
-    &__btn {
-        padding: 14px 43px;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 1;
-        text-transform: uppercase;
-        color: #000;
-        white-space: nowrap;
-        text-align: center;
+    // &__btn {
+    //     padding: 14px 43px;
+    //     font-weight: 500;
+    //     font-size: 18px;
+    //     line-height: 1;
+    //     text-transform: uppercase;
+    //     color: #000;
+    //     white-space: nowrap;
+    //     text-align: center;
 
-        // @mixin hoverDefault($bg-color, $color, $bg-color-h, $color-h)
-        @include hoverDefault(#D1E754, #000, transparent, #D1E754);
-        cursor: pointer;
-        @include adaptive(beforeDesk) {
-            order: -1;
-            width: 100%;
-            margin: 0 auto 10px;
-        }
-    }          
+    //     // @mixin hoverDefault($bg-color, $color, $bg-color-h, $color-h)
+    //     @include hoverDefault(#D1E754, #000, transparent, #D1E754);
+    //     cursor: pointer;
+    //     @include adaptive(beforeDesk) {
+    //         order: -1;
+    //         width: 100%;
+    //         margin: 0 auto 10px;
+    //     }
+    // }          
 
     .page-nav__link.active {
         pointer-events: none;
