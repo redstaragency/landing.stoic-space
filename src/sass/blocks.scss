@@ -2,6 +2,43 @@
 .banner {
     min-height: 250px;
 }
+.video-banner {
+    position: relative;
+    height: 0;
+    padding-top: 50%;
+    margin-bottom: -23px;
+    overflow: hidden;
+    transform: translateY(-113px);
+
+    @include adaptive(beforeDesk) {
+        padding-top: 60%;
+        margin-bottom: 40px;
+        transform: translateY(0);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        opacity: 0.2;
+    }
+
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        object-fit: cover;
+
+    }
+
+}
+
 //Сноски
 .card-note-sm {
     box-sizing: border-box;
@@ -814,6 +851,7 @@
 //Шапка
 .page-header {
     position: relative;
+    z-index: 1;
     &__inner {
         box-sizing: border-box;
         padding: 15px 0;
