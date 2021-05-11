@@ -2530,7 +2530,7 @@ ul li + li {
 }
 @media only screen and (max-width: 1150px) {
   .page-news .btn-close {
-    top: 5px;
+    top: 0;
     right: 5px;
   }
 }
