@@ -2503,6 +2503,32 @@ ul li + li {
   }
 }
 
+.page-header--black .page-header__logo {
+  color: #000;
+}
+.page-header--black .page-nav__link {
+  font-size: 16px;
+  font-weight: normal;
+  padding: 14px 12px;
+  white-space: nowrap;
+  color: #000;
+  font-weight: 500;
+  position: relative;
+}
+.page-header--black .page-nav__link::after {
+  content: "";
+  display: block;
+  width: 0;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+.page-header--black .page-nav__link:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
 .page-news {
   position: relative;
   z-index: 1;

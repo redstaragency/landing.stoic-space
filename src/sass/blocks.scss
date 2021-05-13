@@ -1037,7 +1037,22 @@
         }
     }
 }
+.page-header--black {
+    .page-header__logo {
+        color: #000;
+    }
+    .page-nav__link {
+        font-size: 16px;
+        // line-height: 1;
+        font-weight: normal;
+        padding: 14px 12px;
+        white-space: nowrap;
+        color: #000;
+        font-weight: 500;
 
+        @include hoverUnderline(#000);
+    }
+}
 //Новости перед шапкой
 .page-news {
     position: relative;
