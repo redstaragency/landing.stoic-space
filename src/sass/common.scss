@@ -23,6 +23,8 @@ body {
     color: $basic-color;
 
     counter-reset: results;
+
+    ‑webkit‑text‑size‑adjust: 100%;
 }
 button, input {
     border: none;
