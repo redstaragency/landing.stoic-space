@@ -1483,6 +1483,12 @@ ul li + li {
 .banner {
   min-height: 250px;
 }
+.banner img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .video-banner {
   position: relative;
@@ -1965,6 +1971,7 @@ ul li + li {
   margin: 0;
 }
 .faq-card__asw {
+  display: none;
   padding: 20px 30px;
 }
 @media only screen and (max-width: 1150px) {
@@ -2585,14 +2592,14 @@ ul li + li {
     padding: 5px 35px 5px 5px;
   }
 }
-.page-news__link {
+.page-news a {
   font-weight: 500;
   font-size: 16px;
   line-height: 23px;
   color: #fff;
 }
 @media only screen and (max-width: 1150px) {
-  .page-news__link {
+  .page-news a {
     font-size: 14px;
     line-height: 16px;
   }
