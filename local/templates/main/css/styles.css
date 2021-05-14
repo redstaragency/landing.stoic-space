@@ -1667,7 +1667,7 @@ ul li + li {
 }
 
 .image-card {
-  margin: 0;
+  margin: 0 0 35px;
 }
 .image-card__descr {
   box-sizing: border-box;
@@ -2041,6 +2041,7 @@ ul li + li {
   justify-content: center;
 }
 .socials__item {
+  font-size: 0;
   width: 25px;
   height: 25px;
   background-size: 25px;
@@ -2389,15 +2390,15 @@ ul li + li {
   }
 }
 .page-header__logo {
-  font-family: "Stapel";
-  font-size: 45px;
-  font-weight: 300;
-  line-height: 1;
-  color: #fff;
+  height: 45px;
+  width: 225px;
+  background-size: 100% 100%;
+  background-image: url("../images/stoic-logo-white.svg");
 }
 @media only screen and (max-width: 1150px) {
   .page-header__logo {
-    color: #000;
+    width: 150px;
+    background-image: url("../images/stoic-logo-black.svg");
   }
 }
 @media only screen and (min-width: 1151px) {
@@ -2541,7 +2542,7 @@ ul li + li {
 }
 
 .page-header--black .page-header__logo {
-  color: #000;
+  background-image: url("../images/stoic-logo-black.svg");
 }
 .page-header--black .page-nav__link {
   font-size: 16px;

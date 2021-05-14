@@ -179,7 +179,7 @@
 
 //Карточка с картинкой
 .image-card {
-    margin: 0;
+    margin: 0 0 35px;
     &__descr {
         box-sizing: border-box;
         padding: 20px 20px 20px 40px;
@@ -550,6 +550,7 @@
     justify-content: center;
 
     &__item {
+        font-size: 0;
         width: 25px;
         height: 25px;
         background-size: 25px;
@@ -894,14 +895,13 @@
     }
 
     &__logo {
-        font-family: "Stapel";
-        font-size: 45px;
-        font-weight: 300;
-        line-height: 1;
-        color: #fff;
-
+        height: 45px;
+        width: 225px;
+        background-size: 100% 100%;
+        background-image: url("../images/stoic-logo-white.svg");
         @include adaptive(beforeDesk) {
-            color: #000;
+            width: 150px;
+            background-image: url("../images/stoic-logo-black.svg");
         }
     }
 
@@ -1039,7 +1039,7 @@
 }
 .page-header--black {
     .page-header__logo {
-        color: #000;
+        background-image: url("../images/stoic-logo-black.svg");
     }
     .page-nav__link {
         font-size: 16px;
