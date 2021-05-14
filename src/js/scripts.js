@@ -72,12 +72,11 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     $(document).on('click', '[data-close="control"]', function() {
-        if (window.innerWidth > DESKTOP_SIZE) {
+        if (window.innerWidth > DESKTOP_SIZE && $('.video-banner').length > 0) {
             $(this).closest('[data-close="target"]').addClass('hidden');
-        } else {
-            $(this).closest('[data-close="target"]').slideUp();
-        }
-        
+            return;
+        } 
+        $(this).closest('[data-close="target"]').slideUp(); 
     });
     
 });

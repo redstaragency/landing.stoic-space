@@ -106,11 +106,12 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '[data-close="control"]', function () {
-    if (window.innerWidth > DESKTOP_SIZE) {
+    if (window.innerWidth > DESKTOP_SIZE && jquery__WEBPACK_IMPORTED_MODULE_0___default()('.video-banner').length > 0) {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('[data-close="target"]').addClass('hidden');
-    } else {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('[data-close="target"]').slideUp();
+      return;
     }
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('[data-close="target"]').slideUp();
   });
 });
 
