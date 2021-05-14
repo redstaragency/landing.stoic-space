@@ -2378,6 +2378,7 @@ ul li + li {
 @media only screen and (max-width: 1150px) {
   .page-header__inner {
     padding: 15px;
+    margin-bottom: 0;
   }
 }
 .page-header__logo {

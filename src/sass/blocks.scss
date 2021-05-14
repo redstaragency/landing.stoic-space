@@ -882,6 +882,7 @@
         margin-bottom: 30px;
         @include adaptive(beforeDesk) {
             padding: 15px;
+            margin-bottom: 0;
         }
     }
 
