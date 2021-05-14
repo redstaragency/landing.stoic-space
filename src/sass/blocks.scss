@@ -1053,6 +1053,11 @@
     position: relative;
     z-index: 1;
     background-color: #6861A5;
+    transition: 0.2s ease-in-out;
+    &.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
     &__inner {
         position: relative;
         width: 100%;

@@ -2565,6 +2565,11 @@ ul li + li {
   position: relative;
   z-index: 1;
   background-color: #6861A5;
+  transition: 0.2s ease-in-out;
+}
+.page-news.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 .page-news__inner {
   position: relative;

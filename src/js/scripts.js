@@ -40,6 +40,7 @@ const sameSlidersCreator = (elementsSelector) => {
         });
     });
 }
+const DESKTOP_SIZE = 1150;
 
 window.addEventListener('DOMContentLoaded', () => {
     AOS.init({
@@ -71,7 +72,12 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     $(document).on('click', '[data-close="control"]', function() {
-        $(this).closest('[data-close="target"]').slideUp();
+        if (window.innerWidth > DESKTOP_SIZE) {
+            $(this).closest('[data-close="target"]').addClass('hidden');
+        } else {
+            $(this).closest('[data-close="target"]').slideUp();
+        }
+        
     });
     
 });

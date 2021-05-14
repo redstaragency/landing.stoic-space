@@ -78,6 +78,7 @@ var sameSlidersCreator = function sameSlidersCreator(elementsSelector) {
   });
 };
 
+var DESKTOP_SIZE = 1150;
 window.addEventListener('DOMContentLoaded', function () {
   aos__WEBPACK_IMPORTED_MODULE_2___default().init({
     once: true,
@@ -105,7 +106,11 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '[data-close="control"]', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('[data-close="target"]').slideUp();
+    if (window.innerWidth > DESKTOP_SIZE) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('[data-close="target"]').addClass('hidden');
+    } else {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('[data-close="target"]').slideUp();
+    }
   });
 });
 
