@@ -1691,11 +1691,11 @@ ul li::before {
 
 .image-card {
   margin: 0 0 35px;
+  border-left: 10px solid #6861A5;
 }
 .image-card__descr {
   box-sizing: border-box;
   padding: 20px 20px 20px 40px;
-  border-left: 10px solid #6861A5;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -1722,6 +1722,7 @@ ul li::before {
 .image-card-2 {
   max-width: 750px;
   margin: 0 auto;
+  border: none;
 }
 .image-card-2 .image-card__descr {
   box-sizing: border-box;
