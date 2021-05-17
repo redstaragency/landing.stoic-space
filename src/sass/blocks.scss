@@ -233,6 +233,7 @@
         width: 290px;
         height: 290px;
         border-radius: 100%;
+        object-fit: cover;
 
         @include adaptive(beforeDesk) {
             margin: 20px auto 0;
