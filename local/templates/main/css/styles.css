@@ -1696,7 +1696,7 @@ ul li::before {
   box-sizing: border-box;
   padding: 20px 20px 20px 40px;
   border-left: 10px solid #6861A5;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
 }
 @media only screen and (max-width: 1150px) {
@@ -1708,10 +1708,10 @@ ul li::before {
 }
 .image-card__img {
   width: 290px;
-  height: 225px;
+  height: 100%;
   margin-top: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media only screen and (max-width: 1150px) {
   .image-card__img {
