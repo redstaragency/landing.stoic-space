@@ -66,6 +66,16 @@
     }
 
 }
+.video-banner--course {
+    p {
+        line-height: 1.3;
+    }
+    span {
+        font-size: 28px;
+        font-weight: 600;
+        color: #fff;
+    }
+}
 
 //Сноски
 .card-note-sm {
@@ -777,6 +787,7 @@
     &__rat {
         width: 75px;
         margin-bottom: 5px;
+        text-align: center;
         img {
             object-fit: contain;
         }
@@ -1166,4 +1177,14 @@
     font-size: 14px;
     
     @include hoverUnderline(#fff);
+}
+
+.i-star {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 0L6.12257 3.45492H9.75528L6.81636 5.59017L7.93893 9.04508L5 6.90983L2.06107 9.04508L3.18364 5.59017L0.244718 3.45492H3.87743L5 0Z' fill='%23D1E754'/%3E%3C/svg%3E%0A");
 }

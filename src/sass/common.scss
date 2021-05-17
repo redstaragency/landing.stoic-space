@@ -198,7 +198,7 @@ p {
 }
 
 ul {
-    margin: 0;
+    margin: -10px 0 0;
     padding: 0;
     list-style: none;
 
@@ -209,6 +209,7 @@ ul {
 
         font-size: 18px;
         line-height: 1.5;
+        margin-top: 10px;
 
         @include adaptive(beforeDesk) {
             font-size: 16px;
@@ -228,10 +229,13 @@ ul {
                 margin-top: 6px;
             }
         }
-        & + li {
-            margin-top: 10px;
-        }
     }
+}
+
+.list-flex li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 

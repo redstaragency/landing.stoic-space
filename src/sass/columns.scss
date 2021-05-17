@@ -1,5 +1,6 @@
 // rows
-.row {
+.row,
+.list-flex ul {
     display: flex;
 }
 .row-desk {
@@ -29,7 +30,8 @@
         display: inline-flex;
     }
 }
-.wrap {
+.wrap,
+.list-flex ul {
     flex-wrap: wrap;
 }
 .wrap-desk {
@@ -93,11 +95,13 @@
     }
 
 }
-.column {
+.column,
+.list-flex li {
     display: block;
     width: 100%;
 }
-.column-2 {    
+.column-2,
+.list-flex li {    
     @include adaptive(mobile) {
         @include createCol(1, 0, 20px);
     }
