@@ -206,7 +206,6 @@
     }
     &__img {
         width: 290px;
-        margin-top: 20px;
         object-fit: contain;
 
         @include adaptive(beforeDesk) {
@@ -234,7 +233,6 @@
         width: 290px;
         height: 290px;
         border-radius: 100%;
-        margin-top: 0;
 
         @include adaptive(beforeDesk) {
             margin: 20px auto 0;

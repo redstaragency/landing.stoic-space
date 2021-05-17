@@ -1708,7 +1708,6 @@ ul li::before {
 }
 .image-card__img {
   width: 290px;
-  margin-top: 20px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1738,7 +1737,6 @@ ul li::before {
   width: 290px;
   height: 290px;
   border-radius: 100%;
-  margin-top: 0;
 }
 @media only screen and (max-width: 1150px) {
   .image-card-2 .image-card__img {
