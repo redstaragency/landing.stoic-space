@@ -213,6 +213,12 @@
             max-width: 625px;
             margin: 20px auto 0;
         }
+
+        &::after {
+            content: '';
+            height: 4px;
+            @include underline(#D1E754, 0, 0);
+        }
     }
 }
 
@@ -237,6 +243,10 @@
 
         @include adaptive(beforeDesk) {
             margin: 20px auto 0;
+        }
+
+        &::after {
+            content: none;
         }
     }
 }
