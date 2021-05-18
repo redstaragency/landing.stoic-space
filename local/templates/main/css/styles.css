@@ -2032,6 +2032,10 @@ ul li::before {
   border: 2px solid #D1E754;
   outline: none;
 }
+.callback-form__field--message {
+  resize: none;
+  height: 129px;
+}
 .callback-form__btn {
   height: 43px;
   max-width: 200px;
@@ -2684,7 +2688,7 @@ ul li::before {
 }
 
 .callback-icon-tg {
-  display: block;
+  display: inline-block;
   width: 160px;
   height: 160px;
   background-repeat: no-repeat;

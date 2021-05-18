@@ -841,7 +841,7 @@
         </section>
 
         <section class="page-section">
-            <div class="container container-sm row-desk h-row-between">
+            <div class="container container-sm row-desk h-row-between v-row-start">
                 <div class="page-section__col page-section__col--form">
                     <div class="page-section__header">
                         <h2 class="page-h2">Для представителей "старой" школы</h2>
@@ -849,9 +849,18 @@
                     <div class="page-section__body">
                         <form action="" class="callback-form">
                             <label class="callback-form__field-group">
+                                <span class="callback-form__field-name">ФИО</span>
+                                <input type="text" autocomplete="off" class="callback-form__field" name="user-fio"
+                                    placeholder="">
+                            </label>
+                            <label class="callback-form__field-group">
                                 <span class="callback-form__field-name">E-mail</span>
                                 <input type="text" autocomplete="off" class="callback-form__field" name="user-email"
-                                    placeholder="Ваш Email">
+                                    placeholder="">
+                            </label>
+                            <label class="callback-form__field-group">
+                                <span class="callback-form__field-name">Сообщение</span>
+                                <textarea class="callback-form__field callback-form__field--message" name="user-message"></textarea>
                             </label>
 
                             <input type="submit" class="callback-form__btn" value="Отправить">
@@ -863,8 +872,8 @@
                     <div class="page-section__header">
                         <h2 class="page-h2 centered-desk">Пишите нам в ТG</h2>
                     </div>
-                    <div class="page-section__body">
-                        <a href="index.html" target="_blank" class="centered callback-icon-tg"></a>
+                    <div class="page-section__body centered">
+                        <a href="index.html" target="_blank" class="callback-icon-tg"></a>
                     </div>
                 </div>
             </div>
