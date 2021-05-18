@@ -1718,22 +1718,6 @@ ul li::before {
     margin: 20px auto 0;
   }
 }
-.image-card__img::after {
-  content: "";
-  height: 4px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, #D1E754 60%, #D1E754 85%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0) 100%);
-  display: inline;
-}
-.image-card__img::after::after {
-  content: "";
-  display: block;
-  height: 0;
-}
-@media only screen and (max-width: 1150px) {
-  .image-card__img::after::after {
-    height: 0;
-  }
-}
 
 .image-card-2 {
   max-width: 750px;
@@ -1761,9 +1745,6 @@ ul li::before {
   .image-card-2 .image-card__img {
     margin: 20px auto 0;
   }
-}
-.image-card-2 .image-card__img::after {
-  content: none;
 }
 
 [data-fslightbox] {
