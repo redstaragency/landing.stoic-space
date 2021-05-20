@@ -297,12 +297,14 @@ ul {
     padding-left: 0;
 }
 .page-section__col--tg {
-    border: 4px solid #D1E754,;
+    h2 {
+        @include underline(#D1E754, 32px, 18px)
+    }
     @include adaptive(desktop) {
         max-width: 465px;
     }
     @include adaptive(beforeDesk) {
-        padding: 20px 15px;
+        
     }
 }
 
