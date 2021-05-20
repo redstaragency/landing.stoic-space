@@ -297,6 +297,7 @@ ul {
     padding-left: 0;
 }
 .page-section__col--tg {
+    position: relative;
     h2 {
         @include underline(#D1E754, 32px, 18px)
     }
@@ -306,6 +307,11 @@ ul {
     @include adaptive(beforeDesk) {
         
     }
+}
+
+.page-section__col--form {
+    padding: 16px;
+    border: 4px solid #D1E754;
 }
 
 .page-subsection  {

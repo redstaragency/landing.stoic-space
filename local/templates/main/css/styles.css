@@ -1279,6 +1279,9 @@ ul li::before {
   padding-left: 0;
 }
 
+.page-section__col--tg {
+  position: relative;
+}
 .page-section__col--tg h2 {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, #D1E754 60%, #D1E754 85%, rgba(255, 255, 255, 0) 85%, rgba(255, 255, 255, 0) 100%);
   display: inline;
@@ -1298,6 +1301,11 @@ ul li::before {
     max-width: 465px;
   }
 }
+.page-section__col--form {
+  padding: 16px;
+  border: 4px solid #D1E754;
+}
+
 .page-subsection {
   margin-bottom: 35px;
 }
@@ -2025,6 +2033,7 @@ ul li::before {
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 24px;
+  font-weight: 500;
 }
 .callback-form__field {
   width: 100%;
@@ -2034,8 +2043,12 @@ ul li::before {
   margin-bottom: 20px;
   font-size: 16px;
   line-height: 24px;
-  border: 2px solid #D1E754;
+  border: 1px solid rgba(71, 74, 81, 0.5);
   outline: none;
+  transition: 0.2s ease-in-out;
+}
+.callback-form__field:hover, .callback-form__field:focus {
+  border-color: #333;
 }
 .callback-form__field--message {
   resize: none;
