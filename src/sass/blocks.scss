@@ -439,7 +439,7 @@
     margin-top: 24px;
 }
 .faq-card {
-    &__qst {
+    &__qst:not(&__qst--no-border) {
         position: relative;
         padding: 16px;      
 
@@ -490,6 +490,10 @@
             background-repeat:no-repeat;
         }
     }
+    &__qst--no-border {
+        border: none;
+        
+    }
     &__title {
         margin: 0;
     }
@@ -504,6 +508,7 @@
             padding: 15px;
         }
     }
+    &__qst--no-border + &__asw,
     &__qst.is-active + &__asw {
         display: block;
     }
@@ -514,6 +519,8 @@
 .callback-form {
     display: flex;
     flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
 
     @include adaptive(beforeDesk) {
         margin-bottom: 20px;
@@ -580,7 +587,6 @@
     &__checkbox-custom {
         position: relative;
         display: block;
-        vertical-align: middle;
         height: 20px;
         min-width: 20px;
         width: 20px;

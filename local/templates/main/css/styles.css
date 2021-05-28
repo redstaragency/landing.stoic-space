@@ -1981,7 +1981,7 @@ ul li::before {
   margin-top: 24px;
 }
 
-.faq-card__qst {
+.faq-card__qst:not(.faq-card__qst--no-border) {
   position: relative;
   padding: 16px;
   border: 2px solid #6861A5;
@@ -1991,17 +1991,17 @@ ul li::before {
   transition: 0.2s ease-in-out;
   cursor: pointer;
 }
-.faq-card__qst:hover {
+.faq-card__qst:not(.faq-card__qst--no-border):hover {
   background-color: #fff;
   color: #6861A5;
 }
 @media only screen and (max-width: 1150px) {
-  .faq-card__qst {
+  .faq-card__qst:not(.faq-card__qst--no-border) {
     min-height: 50px;
     padding: 15px 65px 15px 15px;
   }
 }
-.faq-card__qst::after {
+.faq-card__qst:not(.faq-card__qst--no-border)::after {
   content: "";
   position: absolute;
   top: 10px;
@@ -2015,20 +2015,23 @@ ul li::before {
   background-repeat: no-repeat;
 }
 @media only screen and (max-width: 1150px) {
-  .faq-card__qst::after {
+  .faq-card__qst:not(.faq-card__qst--no-border)::after {
     top: 10px;
     right: 15px;
   }
 }
-.faq-card__qst.is-active {
+.faq-card__qst:not(.faq-card__qst--no-border).is-active {
   background-color: #fff;
   color: #6861A5;
 }
-.faq-card__qst:hover::after, .faq-card__qst.is-active::after {
+.faq-card__qst:not(.faq-card__qst--no-border):hover::after, .faq-card__qst:not(.faq-card__qst--no-border).is-active::after {
   background: linear-gradient(#6861A5, #6861A5), linear-gradient(#6861A5, #6861A5);
   background-position: center;
   background-size: 50% 2px, 2px 50%;
   background-repeat: no-repeat;
+}
+.faq-card__qst--no-border {
+  border: none;
 }
 .faq-card__title {
   margin: 0;
@@ -2045,13 +2048,15 @@ ul li::before {
     padding: 15px;
   }
 }
-.faq-card__qst.is-active + .faq-card__asw {
+.faq-card__qst--no-border + .faq-card__asw, .faq-card__qst.is-active + .faq-card__asw {
   display: block;
 }
 
 .callback-form {
   display: flex;
   flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
 }
 @media only screen and (max-width: 1150px) {
   .callback-form {
@@ -2125,7 +2130,6 @@ ul li::before {
 .callback-form__checkbox-custom {
   position: relative;
   display: block;
-  vertical-align: middle;
   height: 20px;
   min-width: 20px;
   width: 20px;
