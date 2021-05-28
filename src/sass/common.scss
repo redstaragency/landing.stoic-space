@@ -127,7 +127,7 @@ a {
     font-size: 48px;
     line-height: 1.2;
 
-    @include underline(#D1E754, 40px, 20px);
+    @include underline(#D1E754, 56px, 20px);
 
     @include adaptive(beforeDesk) {
         font-size: 32px;
@@ -135,7 +135,7 @@ a {
 }
 
 .page-h2 {
-    margin: 0 0 30px;
+    margin: 0 0 48px;
     font-size: 35px;
     line-height: 1.2;
 
@@ -198,7 +198,7 @@ p {
 }
 
 ul {
-    margin: -10px 0 0;
+    margin: 0;
     padding: 0;
     list-style: none;
 
@@ -223,6 +223,7 @@ ul {
             min-height: 10px;
             margin-right: 10px;
             margin-top: 10px;
+            border-radius: 100%;
             background-color: #D1E754;
 
             @include adaptive(beforeDesk) {
@@ -325,6 +326,12 @@ ul {
         margin-top: 15px;
     }
 
+    &__mark > a {
+        display: inline-block;
+        color:#6861A5;
+        @include hoverUnderline(#6861A5);
+    }
+
     &__link {
         position: relative;
         display: inline-block;
@@ -350,7 +357,13 @@ ul {
         
     }
 }
-
+.page-subsection--decor {
+    padding: 40px;
+    background-color: rgba(209, 231, 84, 0.3);
+    margin: 56px 0;
+    border-radius: 16px;
+    box-shadow:0 0 30px rgba(209, 231, 84, 0.3);
+}
 .decor-shape-block {
     position: relative;
     display: flex;
