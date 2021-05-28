@@ -5,7 +5,7 @@
 }
 .row-desk {
     display: flex;
-    @include adaptive(beforeDesk) {
+    @include adaptive(mobile) {
         display: block;
     }
 }
@@ -44,6 +44,11 @@
     flex-wrap: nowrap;
     @include adaptive(beforeDesk) {
         flex-wrap: wrap;
+    }
+}
+.block-mob {
+    @include adaptive(mobile) {
+        display: block;
     }
 }
 .v-row-start {
@@ -114,10 +119,10 @@
 }
 .column-3 {   
     @include adaptive(mobile) {
-        @include createCol(1, 0, 20px);
+        @include createCol(1, 0, 24px);
     }
     @include adaptive(pad) {
-        @include createCol(2, 0, 20px);
+        @include createCol(2, 0, 32px);
     }
     @include adaptive(desktop) {
         @include createCol(3, 0, 0);
@@ -125,10 +130,10 @@
 }
 .column-4 {    
     @include adaptive(mobile) {
-        @include createCol(1, 0, 20px);
+        @include createCol(1, 0, 24px);
     }
     @include adaptive(pad) {
-        @include createCol(2, 0, 20px);
+        @include createCol(2, 0, 32px);
     }
     @include adaptive(desktop) {
         @include createCol(4, 0, 0);
@@ -147,10 +152,10 @@
 }
 .column-3-m {    
     @include adaptive(mobile) {
-        @include createCol(1, 0, 20px);
+        @include createCol(1, 0, 24px);
     }
     @include adaptive(pad) {
-        @include createCol(2, 20px, 20px);
+        @include createCol(2, 20px, 32px);
     }
     @include adaptive(desktop) {
         @include createCol(3, 20px, 0);
@@ -158,13 +163,13 @@
 }
 .column-3-m-w {
     @include adaptive(mobile) {
-        @include createCol(1, 0, 20px);
+        @include createCol(1, 0, 24px);
     }
     @include adaptive(pad) {
-        @include createCol(2, 20px, 30px);
+        @include createCol(2, 20px, 32px);
     }
     @include adaptive(desktop) {
-        @include createCol(3, 20px, 40px);
+        @include createCol(3, 24px, 40px);
     }
 }
 .column-3-m-w-20 {
@@ -180,12 +185,12 @@
 }
 .column-5-m {    
     @include adaptive(mobile) {
-        @include createCol(2, 10px, 14px);
+        @include createCol(2, 12px, 24px);
     }
     @include adaptive(pad) {
-        @include createCol(3, 10px, 14px);
+        @include createCol(3, 14px, 32px);
     }
     @include adaptive(desktop) {
-        @include createCol(5, 34px, 34px);
+        @include createCol(5, 16px, 40px);
     }
 }
