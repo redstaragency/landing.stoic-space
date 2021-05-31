@@ -96,8 +96,11 @@ window.addEventListener('DOMContentLoaded', function () {
     offset: 100,
     disable: 'mobile'
   });
-  sameSlidersCreator('[data-role="slider"]');
-  initCollapse(jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-collapse="control"]'), jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-collapse="control"]').siblings('[data-collapse="target"]').slideToggle());
+  sameSlidersCreator('[data-role="slider"]'); // initCollapse(
+  //     $('[data-collapse="control"]'),
+  //     $('[data-collapse="control"]').siblings('[data-collapse="target"]').slideToggle() 
+  // );
+
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '[data-collapse="control"]', function () {
     var control = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
     var target = control.siblings('[data-collapse="target"]').slideToggle();

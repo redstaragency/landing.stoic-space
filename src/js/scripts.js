@@ -59,10 +59,10 @@ window.addEventListener('DOMContentLoaded', () => {
         disable: 'mobile'
     });
     sameSlidersCreator('[data-role="slider"]');
-    initCollapse(
-        $('[data-collapse="control"]'),
-        $('[data-collapse="control"]').siblings('[data-collapse="target"]').slideToggle() 
-    );
+    // initCollapse(
+    //     $('[data-collapse="control"]'),
+    //     $('[data-collapse="control"]').siblings('[data-collapse="target"]').slideToggle() 
+    // );
     $(document).on('click', '[data-collapse="control"]', function() {
         const control = $(this);
         const target = control.siblings('[data-collapse="target"]').slideToggle();       
