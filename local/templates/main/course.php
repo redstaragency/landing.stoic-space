@@ -157,10 +157,9 @@
                     <div class="page-subsection row-desk v-row-center ">
                         <div class="column column-2 centered-desk hide-mob">
                             <div class="decor-logo">
-<!--                                <video class="video-logo__video" autoplay playsinline muted loop preload>-->
-<!--                                    <source src="banners/course-video-logo.mp4" />-->
-<!--                                </video>-->
-
+                                <video class="video-logo__video" autoplay playsinline muted loop preload>
+                                    <source src="banners/course-video-logo.mp4" />
+                                </video>
                             </div>
 <!--                            <div class="decor-circle">-->
 <!--                                <h3 class="title-medium">Три акцента:</h3>-->

@@ -2940,6 +2940,6 @@ ul li::before {
 
 .video-logo__video {
   max-width: 100%;
-  -webkit-clip-path: polygon(70% 0, 13% 81%, 84% 98%);
-          clip-path: polygon(70% 0, 13% 81%, 84% 98%);
+  -webkit-clip-path: polygon(70% 0, 26% 88%, 69% 96%);
+          clip-path: polygon(70% 0, 26% 88%, 69% 96%);
 }
