@@ -8,6 +8,10 @@ $pad: 768px;
             @content
         }
 			
+    } @else if $media == afterMobile {
+        @media only screen and (min-width: $pad + 1) {
+            @content
+        }			
     } @else if $media == mobile {
         @media only screen and (max-width: $pad - 1) {
             @content

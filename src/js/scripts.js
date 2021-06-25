@@ -21,14 +21,15 @@ const sameSlidersCreator = (elementsSelector) => {
             // parameters
             watchOverflow: true,
             slidesPerView: 1,
-            slidesPerGroup: 1,            
-
+            slidesPerGroup: 1,
+            spaceBetween: 10,           
+            setWrapperSize: true,
+            
             breakpoints: {
                 625: {
                     // parameters
                     slidesPerView: 2,
                     slidesPerGroup: 2,
-                    spaceBetween: 10,
 
                     // navigation
                     navigation: {
@@ -50,7 +51,9 @@ const initCollapse = (control, target) => {
     target.slideUp();
 }
 
-const DESKTOP_SIZE = 1150;
+const DESKTOP_SIZE = 1151;
+const PAD_SIZE = 768;
+const WINDOW_WIDTH = window.innerWidth;
 
 window.addEventListener('DOMContentLoaded', () => {
     AOS.init({
@@ -59,6 +62,10 @@ window.addEventListener('DOMContentLoaded', () => {
         disable: 'mobile'
     });
     sameSlidersCreator('[data-role="slider"]');
+    if (WINDOW_WIDTH < PAD_SIZE) {
+        sameSlidersCreator('[data-role="slider-mob"]');
+    }
+
     // initCollapse(
     //     $('[data-collapse="control"]'),
     //     $('[data-collapse="control"]').siblings('[data-collapse="target"]').slideToggle() 
@@ -86,7 +93,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     $(document).on('click', '[data-close="control"]', function() {
-        if (window.innerWidth > DESKTOP_SIZE && $('.video-banner').length > 0) {
+        if (window.innerWidth >= DESKTOP_SIZE && $('.video-banner').length > 0) {
             $(this).closest('[data-close="target"]').addClass('hidden');
             return;
         } 

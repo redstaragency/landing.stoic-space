@@ -59,7 +59,7 @@ button, input {
     margin: 0 auto;
 
     @include adaptive(beforeDesk) {
-        padding: 0 14px;
+        padding: 0 16px;
         box-sizing: border-box;
     }
 }
@@ -158,7 +158,7 @@ a {
     line-height: 1.2;
 
     @include adaptive(beforeDesk) {
-        font-size: 32px;
+        font-size: 24px;
     }
 }
 
@@ -291,10 +291,10 @@ ul {
     margin-bottom: 104px;
     background-color: #fff;
     @include adaptive(pad) {
-        margin-bottom: 80px;
+        margin-bottom: 72px;
     }
     @include adaptive(mobile) {
-        margin-bottom: 72px;
+        margin-bottom: 56px;
     }
     &__col {
         width: 100%;
@@ -357,9 +357,6 @@ ul {
     @include adaptive(desktop) {
         max-width: 465px;
     }
-    @include adaptive(beforeDesk) {
-        
-    }
 }
 
 .page-section__col--form {
@@ -369,6 +366,10 @@ ul {
 
 .page-subsection  {
     margin-bottom: 35px;
+
+    @include adaptive(beforeDesk) {
+        margin-bottom: 24px;
+    }
 
     &:last-child {
         margin-bottom: 0;

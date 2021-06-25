@@ -6,7 +6,17 @@
         min-height: 125px;
         margin: 0 auto;
     }
+    .swiper-container--mob {
+        max-width: unset;
+        min-height: unset;
+    }
+    .swiper-wrapper--mob {
+        flex-wrap: wrap;
 
+        @include adaptive(mobile) {
+            flex-wrap: nowrap;
+        }
+    }
     .swiper-button-prev, 
     .swiper-button-next {
         color: #000;
@@ -15,6 +25,11 @@
         @include adaptive(beforeDesk) {
             display: none;
         }
+    }
+
+    .swiper-button-prev--mob,
+    .swiper-button-next--mob {
+        display: none;
     }
 
     .swiper-button-prev {
@@ -31,6 +46,12 @@
 
     .swiper-slide {
         height: unset;
+    }
+
+    .swiper-slide--mob {
+        @include adaptive(mobile) {
+            margin: 0;
+        }
     }
 }
 
