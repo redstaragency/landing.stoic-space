@@ -542,28 +542,29 @@
                     <h2 class="page-h2 centered">Для представителей "старой" школы</h2>
                 </div>
                 <div class="page-section__body">
-                    <form action="" class="callback-form">
-                        <label class="callback-form__field-group">
-                            <span class="callback-form__field-name">ФИО</span>
-                            <input type="text" autocomplete="off" class="callback-form__field" name="user-fio"
-                                placeholder="">
-                        </label>
-                        <label class="callback-form__field-group">
-                            <span class="callback-form__field-name">E-mail</span>
-                            <input type="text" autocomplete="off" class="callback-form__field" name="user-email"
-                                placeholder="">
-                        </label>
-                        <label class="callback-form__field-group">
-                            <span class="callback-form__field-name">Сообщение</span>
-                            <textarea class="callback-form__field callback-form__field--message" name="user-message"></textarea>
-                        </label>
+                    <form action="" class="callback-form" data-form="callback-form">
+                        <div class="callback-form__field-group">
+                            <label class="callback-form__field-name" for="user-name">ФИО</label>
+                            <input type="text" autocomplete="off" class="callback-form__field" name="user-fio" id="user-name" data-required> 
+                            <span class="callback-form__error">Это поле обязательно для заполнения</span>
+                        </div>
+                        <div class="callback-form__field-group">
+                            <label class="callback-form__field-name" for="user-name">E-mail</label>
+                            <input type="text" autocomplete="off" class="callback-form__field" name="user-email" id="user-email" data-required>
+                            <span class="callback-form__error">Это поле обязательно для заполнения</span>
+                        </div>
+                        <div class="callback-form__field-group">
+                            <label class="callback-form__field-name" for="user-message">Сообщение</label>
+                            <textarea class="callback-form__field callback-form__field--message" name="user-message" id="user-message" data-required></textarea>
+                            <span class="callback-form__error">Это поле обязательно для заполнения</span>
+                        </div>
 
                         <label class="callback-form__field-group callback-form__field-group--row callback-form__field-group--mxb">
-                            <input type="checkbox" class="callback-form__checkbox" checked readonly>
+                            <input type="checkbox" class="callback-form__checkbox" checked name="user-agreement" data-agreement>
                             <span class="callback-form__checkbox-custom"></span>
                             <span class="callback-form__field-name">Я согласен с условиями обработки <a href="#">персональных данных</a></span>
                         </label>
-                        <input type="submit" class="callback-form__btn" value="Отправить">
+                        <input type="submit" class="callback-form__btn" value="Отправить" disabled>
                     </form>
                 </div>
             </div>

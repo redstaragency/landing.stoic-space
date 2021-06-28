@@ -580,6 +580,7 @@
     &__field-group {
         display: inline-flex;
         flex-direction: column;
+        margin-bottom: 20px;
     }
     &__field-group--row {
         flex-direction: row;
@@ -601,7 +602,6 @@
         height: 43px;
         box-sizing: border-box;
         padding: 12px;
-        margin-bottom: 20px;
         font-size: 16px;
         line-height: 24px;
         border: 2px solid #333;
@@ -630,7 +630,10 @@
         // @mixin hoverDefault($bg-color, $color, $bg-color-h, $color-h)
         @include hoverDefault(#D1E754, #000, #fff, #D1E754);
         cursor: pointer;
-
+        &:disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
         @include adaptive(beforeDesk) {
             max-width: unset;
         }
@@ -667,6 +670,15 @@
         display: inline-block;
         color:#6861A5;
         @include hoverUnderline(#6861A5);
+    }
+
+    &__error {
+        display: none;
+        color: #ec4122;
+        font-size: 12px;
+    }
+    .error > &__error {
+        display: block;
     }
 }
 

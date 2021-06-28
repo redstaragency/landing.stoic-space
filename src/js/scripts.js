@@ -51,6 +51,62 @@ const initCollapse = (control, target) => {
     target.slideUp();
 }
 
+const formValidator = {
+    form: null,
+    fields: null,
+    formAgreement: null,
+    formButtonSubmit: null,
+    validFields: [],
+    // getFieldType(field) {
+    //     if (field.prop("tagName") === 'textarea') {
+    //         return 'text';
+    //     }
+    //     return field.attr('type');
+    // },
+    getFieldName(field) {
+        return field.attr('name');
+    },
+    isTextFieldValid(textField) {
+        return textField.val().length > 0;
+    },
+    isCheckboxValid(checkbox) {
+        return checkbox.prop('checked');
+    },
+    validationField(field, fieldName) {
+        let isFieldValid = this.isTextFieldValid;
+
+        if (!this.validFields.includes(fieldName) && isFieldValid(field)) {
+            this.validFields.push(fieldName);
+            field.closest('div').removeClass('error');
+        } 
+        if (this.validFields.includes(fieldName) && !isFieldValid(field)) {
+            this.validFields.splice(this.validFields.indexOf(fieldName), 1);
+            field.closest('div').addClass('error');
+        }
+    },
+    validationForm() {
+        if (this.validFields.length === this.fields.length
+            && this.isCheckboxValid(this.formAgreement)) {
+            this.formButtonSubmit.prop('disabled', false);
+            return;
+        } 
+
+        this.formButtonSubmit.prop('disabled', true);
+    },
+    init() {
+        this.form = $('[data-form="callback-form"]');
+        this.fields = this.form.find('[data-required]');
+        this.formAgreement = this.form.find('[data-agreement]');
+        this.formButtonSubmit = this.form.find('input[type="submit"]');
+
+        this.fields.on('input', (event) => {
+            this.validationField($(event.target), this.getFieldName($(event.target)))
+            this.validationForm();
+        });
+        this.formAgreement.on('input', this.validationForm.bind(this))
+    }
+}
+
 const DESKTOP_SIZE = 1151;
 const PAD_SIZE = 768;
 const WINDOW_WIDTH = window.innerWidth;
@@ -62,14 +118,12 @@ window.addEventListener('DOMContentLoaded', () => {
         disable: 'mobile'
     });
     sameSlidersCreator('[data-role="slider"]');
+    formValidator.init();
+
     if (WINDOW_WIDTH < PAD_SIZE) {
         sameSlidersCreator('[data-role="slider-mob"]');
     }
 
-    // initCollapse(
-    //     $('[data-collapse="control"]'),
-    //     $('[data-collapse="control"]').siblings('[data-collapse="target"]').slideToggle() 
-    // );
     $(document).on('click', '[data-collapse="control"]', function() {
         const control = $(this);
         const target = control.siblings('[data-collapse="target"]').slideToggle();       
