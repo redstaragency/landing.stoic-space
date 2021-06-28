@@ -5,6 +5,10 @@
         max-width: 900px;
         min-height: 125px;
         margin: 0 auto;
+
+        @include adaptive(beforeDesk) {
+            max-width: 100%;
+        }
     }
     .swiper-container--mob {
         max-width: unset;
