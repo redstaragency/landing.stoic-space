@@ -250,6 +250,9 @@
             font-size: 16px;
             line-height: 24px;
         }
+        @include adaptive(mobile) {
+            padding: 0;
+        }
     }
     &__img,
     img {

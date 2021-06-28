@@ -25,6 +25,10 @@ body {
     counter-reset: results;
 
     ‑webkit‑text‑size‑adjust: 100%;
+    scroll-behavior:smooth;
+}
+main {
+    scroll-behavior:smooth;
 }
 button, input {
     border: none;
@@ -416,6 +420,11 @@ ul {
     margin: 56px 0;
     border-radius: 16px;
     box-shadow:0 0 30px rgba(209, 231, 84, 0.3);
+
+    @include adaptive(beforeDesk) {
+        padding: 24px;
+        margin: 32px 0;
+    }
 }
 .decor-shape-block {
     position: relative;
