@@ -21,23 +21,28 @@
     .swiper-button-next {
         color: #000;
         transition: opacity 0.2s ease-in-out;
-
-        @include adaptive(beforeDesk) {
-            display: none;
-        }
     }
 
-    .swiper-button-prev--mob,
-    .swiper-button-next--mob {
-        display: none;
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        @include adaptive(beforeDesk) {
+            font-size: 16px;
+            font-weight: 700;
+        }
     }
 
     .swiper-button-prev {
         left: -60px;
+        @include adaptive(beforeDesk) {
+            left: -22px;
+        }
     }
 
     .swiper-button-next {
         right: -60px;
+        @include adaptive(beforeDesk) {
+            right: -22px;
+        }
     }
 
     .swiper-button-disabled {

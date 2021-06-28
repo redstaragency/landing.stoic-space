@@ -1648,20 +1648,27 @@ ul li::before {
   transition: opacity 0.2s ease-in-out;
 }
 @media only screen and (max-width: 1150px) {
-  .page-slider .swiper-button-prev,
-.page-slider .swiper-button-next {
-    display: none;
+  .page-slider .swiper-button-prev::after,
+.page-slider .swiper-button-next::after {
+    font-size: 16px;
+    font-weight: 700;
   }
-}
-.page-slider .swiper-button-prev--mob,
-.page-slider .swiper-button-next--mob {
-  display: none;
 }
 .page-slider .swiper-button-prev {
   left: -60px;
 }
+@media only screen and (max-width: 1150px) {
+  .page-slider .swiper-button-prev {
+    left: -22px;
+  }
+}
 .page-slider .swiper-button-next {
   right: -60px;
+}
+@media only screen and (max-width: 1150px) {
+  .page-slider .swiper-button-next {
+    right: -22px;
+  }
 }
 .page-slider .swiper-button-disabled {
   opacity: 0;

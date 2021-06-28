@@ -63,16 +63,17 @@ var sameSlidersCreator = function sameSlidersCreator(elementsSelector) {
       slidesPerGroup: 1,
       spaceBetween: 10,
       setWrapperSize: true,
+      // navigation
+      navigation: {
+        nextEl: sliderBtnNext,
+        prevEl: sliderBtnPrev
+      },
       breakpoints: {
         625: {
           // parameters
           slidesPerView: 2,
           slidesPerGroup: 2,
-          // navigation
-          navigation: {
-            nextEl: sliderBtnNext,
-            prevEl: sliderBtnPrev
-          }
+          pagination: false
         }
       }
     });
