@@ -2,9 +2,9 @@ import $ from "jquery";
 import fslightbox from "fslightbox";
 import AOS from "aos";
 import Swiper from 'swiper';
-import SwiperCore, { Navigation} from 'swiper/core';
+import SwiperCore, { Navigation, Pagination} from 'swiper/core';
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation, Pagination]);
 const sameSlidersCreator = (elementsSelector) => {
     if (elementsSelector == "") {
         return false;
@@ -14,6 +14,7 @@ const sameSlidersCreator = (elementsSelector) => {
 
     [...elements].forEach(function(element) {
         const sliderContainer = element.querySelector('.swiper-container');
+        const sliderPagination = element.querySelector('.swiper-pagination');
         const sliderBtnNext = element.querySelector('.swiper-button-next');
         const sliderBtnPrev = element.querySelector('.swiper-button-prev');
 
@@ -26,17 +27,21 @@ const sameSlidersCreator = (elementsSelector) => {
             setWrapperSize: true,
 
             // navigation
+            pagination: {
+                el: sliderPagination,
+                type: 'bullets',
+            },
+
             navigation: {
                 nextEl: sliderBtnNext,
                 prevEl: sliderBtnPrev,
-            },
-            
+            }, 
+
             breakpoints: {
                 625: {
                     // parameters
                     slidesPerView: 2,
                     slidesPerGroup: 2,
-                    pagination: false,   
                 }
             }
         });
@@ -58,12 +63,7 @@ const formValidator = {
     formAgreement: null,
     formButtonSubmit: null,
     validFields: [],
-    // getFieldType(field) {
-    //     if (field.prop("tagName") === 'textarea') {
-    //         return 'text';
-    //     }
-    //     return field.attr('type');
-    // },
+
     getFieldName(field) {
         return field.attr('name');
     },
@@ -88,6 +88,10 @@ const formValidator = {
     validationForm() {
         if (this.validFields.length === this.fields.length
             && this.isCheckboxValid(this.formAgreement)) {
+            this.formButtonSubmit.prop('disabled', false);
+            return;
+        } 
+        if (this.validFields.length === this.fields.length) {
             this.formButtonSubmit.prop('disabled', false);
             return;
         } 

@@ -25,6 +25,15 @@
     .swiper-button-next {
         color: #000;
         transition: opacity 0.2s ease-in-out;
+
+        @include adaptive(mobile) {
+            display: none;
+        }
+    }
+
+    .swiper-button-prev--mob,
+    .swiper-button-next--mob {
+        display: none;
     }
 
     .swiper-button-prev::after,
@@ -61,6 +70,22 @@
         @include adaptive(mobile) {
             margin: 0;
         }
+    }
+
+    .swiper-pagination {
+        width: 100%;
+
+        @include adaptive(desktop) {
+            display: none;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        margin-right: 4px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #00000085;
     }
 }
 
