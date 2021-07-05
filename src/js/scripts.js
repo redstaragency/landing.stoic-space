@@ -90,11 +90,7 @@ const formValidator = {
             && this.isCheckboxValid(this.formAgreement)) {
             this.formButtonSubmit.prop('disabled', false);
             return;
-        } 
-        if (this.validFields.length === this.fields.length) {
-            this.formButtonSubmit.prop('disabled', false);
-            return;
-        } 
+        }
 
         this.formButtonSubmit.prop('disabled', true);
     },
